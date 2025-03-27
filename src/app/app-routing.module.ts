@@ -7,7 +7,7 @@ import { IdiomasComponent } from './pages/idiomas/idiomas.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'resumo', pathMatch: 'full' },
+  { path: '', redirectTo: 'profile', pathMatch: 'full' },
   { path: 'profile', component: PerfilComponent },
   { path: 'experience', component: ExperienciaComponent },
   { path: 'studies', component: EstudosComponent },
