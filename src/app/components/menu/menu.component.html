@@ -1,5 +1,8 @@
 <!-- MOBILE: Tabs -->
 <div *ngIf="isMobile" class="mobile-menu">
+    <div class="foto-container-mobile">
+      <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Photo Profile" />
+    </div>
     <mat-tab-group
       [selectedIndex]="selectedTabIndex"
       (selectedIndexChange)="onTabChange($event)"
