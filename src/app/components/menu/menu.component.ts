@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
 
   onTabChange(index: number): void {
     this.selectedTabIndex = index;
-    const routes = ['/perfil', '/experience', '/studies', '/languages', '/contacts'];
+    const routes = ['/profile', '/experience', '/studies', '/languages', '/contacts'];
     this.router.navigate([routes[index]]);
   }
 
