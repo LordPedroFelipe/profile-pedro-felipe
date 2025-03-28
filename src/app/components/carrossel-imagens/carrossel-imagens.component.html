@@ -1,0 +1,12 @@
+<div class="carrossel-container">
+    <button mat-icon-button (click)="mostrarAnterior()">
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+  
+    <img [src]="imagens[imagemAtual]" alt="Imagem do carrossel" class="imagem-carrossel" />
+  
+    <button mat-icon-button (click)="mostrarProxima()">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+</div>
+  

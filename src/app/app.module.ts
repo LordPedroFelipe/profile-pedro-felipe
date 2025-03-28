@@ -17,6 +17,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { IdiomasComponent } from './pages/idiomas/idiomas.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ResumoComponent } from './pages/resumo/resumo.component';
+import { CarrosselImagensComponent } from './components/carrossel-imagens/carrossel-imagens.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ResumoComponent } from './pages/resumo/resumo.component';
     EstudosComponent,
     IdiomasComponent,
     ContatosComponent,
+    CarrosselImagensComponent,
   ],
   imports: [
     BrowserModule,
