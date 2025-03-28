@@ -53,11 +53,15 @@
     }
   
     .foto-container {
-      margin-right: 0;
-      margin-bottom: 20px;
+        margin-right: 24px;
+    }
+  
+    .foto-container-direita {
+        margin-top: 20px;
+        margin-left: 0;
     }
   
     .card {
       max-width: 100%;
     }
-  }
+}
