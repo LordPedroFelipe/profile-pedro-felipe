@@ -1,0 +1,29 @@
+.filter-container {
+    max-width: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  mat-card {
+    margin: 20px auto;
+    max-width: 800px;
+  
+    img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  
+  mat-spinner {
+    display: block;
+    margin: 30px auto;
+  }
+  
+  .error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

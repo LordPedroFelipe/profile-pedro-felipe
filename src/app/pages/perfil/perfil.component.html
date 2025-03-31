@@ -1,153 +1,85 @@
 <mat-toolbar color="primary">
-    <span>Pedro Felipe - Senior Developer</span>
+    <span>{{ 'TITLE' | translate }}</span>
 </mat-toolbar>
   
-<div class="resumo-wrapper">
+  <div class="resumo-wrapper">
     <div class="foto-container">
-        <img src="assets/img/PedroFelipe.PNG" alt="Pedro Photo Profile" />
+      <img src="assets/img/PedroFelipe.PNG" alt="Pedro Photo Profile" />
     </div>
   
     <mat-card class="profile-card">
-        <mat-card-title>Hello,</mat-card-title>
-        <mat-card-title>My name is Pedro Felipe, I'm from Brasil and I work as a Senior Software Engineer, with <b></b>12 years of experience focused on frontend and backend development.</mat-card-title>
-        <mat-card-content>
-            <p>I specialize in technologies such as <b>Angular (15+), TypeScript and Node.js</b>, with solid experience in creating scalable, high-performance and high-quality solutions. I also have skills in systems architecture and technical leadership, always seeking to add value to the teams I work with.</p>
-            <p>Joinville, Santa Catarina, Brazil</p>
-        </mat-card-content>
+      <mat-card-title>{{ 'HELLO' | translate }}</mat-card-title>
+      <mat-card-title>{{ 'INTRO' | translate }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ 'TECH_DESC' | translate }}</p>
+        <p>{{ 'LOCATION' | translate }}</p>
+      </mat-card-content>
     </mat-card>
-</div>
+  </div>
   
-<mat-card class="resumo-card">
-    <mat-card-title>SUMMARY</mat-card-title>
+  <mat-card class="resumo-card">
+    <mat-card-title>{{ 'SUMMARY' | translate }}</mat-card-title>
     <mat-card-content>
-        <p>
-            Experienced Systems Analyst with a strong background in developing robust WEB ERP systems, utilizing Caché Database and proficient in HTML, Javascript, CSS, and JQuery.
-        </p>
-        <p>
-            Extensive expertise in the Healthcare industry, specializing in the analysis and development of systems using Caché Database, object-oriented programming, and advanced analytical methodologies.
-        </p>
-        <p>
-            Proven track record of successfully delivering a diverse range of projects, employing cutting-edge technologies such as HTML5, CSS3, Bootstrap, JavaScript, JQuery, Angular, NodeJS, PostgreSQL, MongoDB, among others.
-        </p>
-        <p>
-            Currently, I am an integral part of an agile development team, actively contributing to multiple projects. My primary focus lies in front-end analysis and development, proficient in TypeScript, Angular, and Git.
-        </p>
+      <p>{{ 'SUMMARY_1' | translate }}</p>
+      <p>{{ 'SUMMARY_2' | translate }}</p>
+      <p>{{ 'SUMMARY_3' | translate }}</p>
+      <p>{{ 'SUMMARY_4' | translate }}</p>
     </mat-card-content>
-</mat-card>
+  </mat-card>
   
-<mat-card class="resumo-card">
-    <mat-card-title>SKILLS</mat-card-title>
+  <mat-card class="resumo-card">
+    <mat-card-title>{{ 'SKILLS' | translate }}</mat-card-title>
     <mat-card-content>
-        <p>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Angular 15+
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Typescript
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Javascript
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                HTML
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                CSS
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                NodeJS
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                JSON
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                API/WebServices
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Unit Tests
-            </button>
-        </p>
-        <p>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                SCRUM
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Responsive Development
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                PostgresSQL
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Git/Github/GitLab
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Angular Material
-            </button>
-            <button mat-raised-button class="skill-button"
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over">
-                Bootstrap
-            </button>
-        </p>
+      <p>
+        <button mat-raised-button class="skill-button">Angular 15+</button>
+        <button mat-raised-button class="skill-button">Typescript</button>
+        <button mat-raised-button class="skill-button">Javascript</button>
+        <button mat-raised-button class="skill-button">HTML</button>
+        <button mat-raised-button class="skill-button">CSS</button>
+        <button mat-raised-button class="skill-button">NodeJS</button>
+        <button mat-raised-button class="skill-button">JSON</button>
+        <button mat-raised-button class="skill-button">API/WebServices</button>
+        <button mat-raised-button class="skill-button">Unit Tests</button>
+      </p>
+      <p>
+        <button mat-raised-button class="skill-button">SCRUM</button>
+        <button mat-raised-button class="skill-button">Responsive Development</button>
+        <button mat-raised-button class="skill-button">PostgresSQL</button>
+        <button mat-raised-button class="skill-button">Git/Github/GitLab</button>
+        <button mat-raised-button class="skill-button">Angular Material</button>
+        <button mat-raised-button class="skill-button">Bootstrap</button>
+      </p>
     </mat-card-content>
-</mat-card>
+  </mat-card>
   
-<mat-card class="resumo-card">
-    <mat-card-title>PUBLICATIONS</mat-card-title>
+  <mat-card class="resumo-card">
+    <mat-card-title>{{ 'PUBLICATIONS' | translate }}</mat-card-title>
     <mat-card-content>
-        <p>
-            Guide to integrating Microsoft MSAL Authentication with Angular 15 and MicroFrontend Nx.Dev
-        </p>
-        <p>
-            <a href="https://medium.com/@pf.souza15/microsoft-msal-authentication-with-angular-and-microfrontend-nx-dev-5e7f492fd4dd" target="_blank" rel="noopener">
-                Authentication with Angular and MicroFrontend Nx.Dev
-            </a>
-        </p>
-        <p>
-            Tutorial to Creating an Angular Project with Nx.dev (Module Federation)
-        </p>
-        <p>
-            <a href="https://medium.com/@pf.souza15/creating-an-angular-project-with-nx-dev-a1ad925ab5f5" target="_blank" rel="noopener">
-                Creating an Angular Project with Nx.dev
-            </a>            
-        </p>
+      <p>{{ 'PUBLICATION_1' | translate }}</p>
+      <p>
+        <a href="https://medium.com/@pf.souza15/microsoft-msal-authentication-with-angular-and-microfrontend-nx-dev-5e7f492fd4dd" target="_blank" rel="noopener">
+          Authentication with Angular and MicroFrontend Nx.Dev
+        </a>
+      </p>
+      <p>{{ 'PUBLICATION_2' | translate }}</p>
+      <p>
+        <a href="https://medium.com/@pf.souza15/creating-an-angular-project-with-nx-dev-a1ad925ab5f5" target="_blank" rel="noopener">
+          Creating an Angular Project with Nx.dev
+        </a>
+      </p>
     </mat-card-content>
-</mat-card>
-
+  </mat-card>
   
-<mat-card class="resumo-card">
-    <mat-card-title>PHOTOS</mat-card-title>
+  <mat-card class="resumo-card">
+    <mat-card-title>{{ 'PHOTOS' | translate }}</mat-card-title>
     <mat-card-content>
-        <app-carrossel-imagens></app-carrossel-imagens>
+      <app-carrossel-imagens></app-carrossel-imagens>
     </mat-card-content>
-</mat-card>
-
+  </mat-card>
+  
+  <mat-card class="resumo-card">
+    <mat-card-content>
+      <app-nasa-apod></app-nasa-apod>
+    </mat-card-content>
+  </mat-card>
   
