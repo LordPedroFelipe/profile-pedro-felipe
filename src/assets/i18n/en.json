@@ -1,0 +1,121 @@
+{
+  "TITLE": "Pedro Felipe - Senior Frontend Developer",
+  "HELLO": "Hello,",
+  "INTRO": "My name is Pedro Felipe, I'm from Brazil and I work as a Senior Software Engineer, with 12 years of experience focused on frontend and backend development.",
+  "TECH_DESC": "I specialize in technologies such as Angular (15+), TypeScript and Node.js, with solid experience in creating scalable, high-performance and high-quality solutions. I also have skills in systems architecture and technical leadership, always seeking to add value to the teams I work with.",
+  "LOCATION": "Joinville, Santa Catarina, Brazil",
+
+  "SUMMARY": "Summary",
+  "SUMMARY_1": "Experienced Systems Analyst with a strong background in developing robust WEB ERP systems, utilizing Caché Database and proficient in HTML, Javascript, CSS, and JQuery.",
+  "SUMMARY_2": "Extensive expertise in the Healthcare industry, specializing in the analysis and development of systems using Caché Database, object-oriented programming, and advanced analytical methodologies.",
+  "SUMMARY_3": "Proven track record of successfully delivering a diverse range of projects, employing cutting-edge technologies such as HTML5, CSS3, Bootstrap, JavaScript, JQuery, Angular, NodeJS, PostgreSQL, MongoDB, among others.",
+  "SUMMARY_4": "Currently, I am an integral part of an agile development team, actively contributing to multiple projects. My primary focus lies in front-end analysis and development, proficient in TypeScript, Angular, and Git.",
+
+  "SKILLS": "Skills",
+  "PUBLICATIONS": "Publications",
+  "PUBLICATION_1": "Guide to integrating Microsoft MSAL Authentication with Angular 15 and MicroFrontend Nx.Dev",
+  "PUBLICATION_2": "Tutorial to Creating an Angular Project with Nx.dev (Module Federation)",
+
+  "PHOTOS": "Photos",
+  "NASA": "NASA APOD Picture of the Day",
+  "EXPERIENCE_TITLE": "With 12 years of experience",
+  "EXPERIENCE": [
+    {
+      "TITLE": "Frontend Software Engineer - Angular 9+, Typescript",
+      "DATE": "Date: 10/2022 - At Moment",
+      "COMPANY": "Company: Via Varejo - Casas Bahia",
+      "DESCRIPTION": [
+        "Description: Frontend Software Engineer Senior",
+        "Technologies used: Angular, Typescript, Git, SCRUM, among others...",
+        "Working with Architecture of new projects, MicroFrontend with Module Federation and Nx.Dev",
+        "Integrating an agile development team, working on some projects.",
+        "Focused on front-end analysis and development.",
+        "Working in the Insurance and Services Platform SQUAD."
+      ]
+    },
+    {
+      "TITLE": "Senior Frontend Developer",
+      "DATE": "Date: 08/2021 - 10/2022",
+      "COMPANY": "Company: OPAH TI",
+      "DESCRIPTION": [
+        "Description: Frontend Developer Analyst",
+        "Technologies used: Angular, Typescript, Git, among others...",
+        "Integrating an agile development team, working on some projects.",
+        "Focused on front-end analysis and development."
+      ]
+    },
+    {
+      "TITLE": "Senior Frontend Developer",
+      "DATE": "Date: 10/2020 - 09/2021",
+      "COMPANY": "Company: Nexo AI",
+      "DESCRIPTION": [
+        "Description: Frontend Developer Analyst",
+        "Technologies used: Angular, Typescript, Git, among others...",
+        "Integrating an agile development team, working on some projects.",
+        "Focused on front-end analysis and development."
+      ]
+    },
+    {
+      "TITLE": "Senior Frontend Developer",
+      "DATE": "Date: 03/2020 - 01/2021",
+      "COMPANY": "Company: Becomex Lab",
+      "DESCRIPTION": [
+        "Description: Frontend Developer Analyst",
+        "Technologies used: Angular, Typescript, Git, among others...",
+        "Integrating an agile development team, working on some projects.",
+        "Focused on front-end analysis and development."
+      ]
+    },
+    {
+      "TITLE": "FullStack Developer",
+      "DATE": "Date: 02/2014 - 03/2020",
+      "COMPANY": "Company: Micromed Sistemas Ltda",
+      "DESCRIPTION": [
+        "Description: FullStack Developer Analyst",
+        "Creation of several projects using different technologies such as:",
+        "HTML5, CSS3, Bootstrap, JavaScript, Jquery, TypeScript, Angular, NodeJS, Postgresql, MongoDB among others."
+      ]
+    },
+    {
+      "TITLE": "Web Developer",
+      "DATE": "Date: 03/2012 - 12/2013",
+      "COMPANY": "Company: Web Mais Sistemas",
+      "DESCRIPTION": [
+        "Description: Web Developer Analyst",
+        "Back-end and database development with Intersystems Cache technology.",
+        "Development with Javascript, HTML, CSS and componentization on the Front-end.",
+        "I worked correcting support and making improvements to the company's ERP system, in several modules, understanding the client's needs and implementing the source code in the best way possible."
+      ]
+    }
+  ],
+  "MENU": {
+    "PROFILE": "Profile",
+    "EXPERIENCE": "Experience",
+    "STUDIES": "Studies",
+    "LANGUAGES": "Languages",
+    "CONTACTS": "Contacts"
+  },
+  "STUDIES_TITLE": "Complete postgraduate studies",
+  "STUDIES": [
+    {
+      "INSTITUTION": "Anhanguera Educacional",
+      "DATE": "Date: 01/2018 - 12/2019",
+      "COURSE": "Postgraduate MBA in Strategic Business Management"
+    },
+    {
+      "INSTITUTION": "Anhanguera Educacional",
+      "DATE": "Date: 01/2014 - 12/2017",
+      "COURSE": "Bachelor's Degree in Software Analysis and Development"
+    },
+    {
+      "INSTITUTION": "Senac Brazil",
+      "DATE": "Date: 01/2013 - 12/2013",
+      "COURSE": "Information Technology Management Technologist"
+    },
+    {
+      "INSTITUTION": "SATC",
+      "DATE": "Date: 01/2010 - 12/2011",
+      "COURSE": "Computer technical course"
+    }
+  ]
+}

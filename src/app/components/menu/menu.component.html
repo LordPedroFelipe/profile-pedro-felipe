@@ -1,31 +1,42 @@
 <!-- MOBILE: Tabs -->
 <div *ngIf="isMobile" class="mobile-menu">
-    <div class="foto-container-mobile">
-      <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Photo Profile" />
-    </div>
-    <mat-tab-group
-      [selectedIndex]="selectedTabIndex"
-      (selectedIndexChange)="onTabChange($event)"
-      mat-stretch-tabs
-      color="primary"
-    >
-      <mat-tab label="Profile"></mat-tab>
-      <mat-tab label="Experience"></mat-tab>
-      <mat-tab label="Studies"></mat-tab>
-      <mat-tab label="Languages"></mat-tab>
-      <mat-tab label="Contacts"></mat-tab>
-    </mat-tab-group>
+  <div class="foto-container-mobile">
+    <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Photo Profile" />
+  </div>
+
+  <mat-tab-group
+    [selectedIndex]="selectedTabIndex"
+    (selectedIndexChange)="onTabChange($event)"
+    mat-stretch-tabs
+    color="primary"
+  >
+    <mat-tab label="{{ 'MENU.PROFILE' | translate }}"></mat-tab>
+    <mat-tab label="{{ 'MENU.EXPERIENCE' | translate }}"></mat-tab>
+    <mat-tab label="{{ 'MENU.STUDIES' | translate }}"></mat-tab>
+    <mat-tab label="{{ 'MENU.LANGUAGES' | translate }}"></mat-tab>
+    <mat-tab label="{{ 'MENU.CONTACTS' | translate }}"></mat-tab>
+  </mat-tab-group>
 </div>
-  
-  <!-- DESKTOP: Menu lateral -->
+
+<!-- DESKTOP: Menu lateral -->
 <div *ngIf="!isMobile" class="sidebar">
-    <div class="foto-container">
-        <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Photo Profile" />
-    </div>
-    <button mat-button (click)="navigateTo('/profile', 0)">Profile</button>
-    <button mat-button (click)="navigateTo('/experience', 1)">Experience</button>
-    <button mat-button (click)="navigateTo('/studies', 2)">Studies</button>
-    <button mat-button (click)="navigateTo('/languages', 3)">Languages</button>
-    <button mat-button (click)="navigateTo('/contacts', 4)">Contacts</button>
+  <div class="foto-container">
+    <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Photo Profile" />
+  </div>
+
+  <button mat-button (click)="navigateTo('/profile', 0)">
+    {{ 'MENU.PROFILE' | translate }}
+  </button>
+  <button mat-button (click)="navigateTo('/experience', 1)">
+    {{ 'MENU.EXPERIENCE' | translate }}
+  </button>
+  <button mat-button (click)="navigateTo('/studies', 2)">
+    {{ 'MENU.STUDIES' | translate }}
+  </button>
+  <button mat-button (click)="navigateTo('/languages', 3)">
+    {{ 'MENU.LANGUAGES' | translate }}
+  </button>
+  <button mat-button (click)="navigateTo('/contacts', 4)">
+    {{ 'MENU.CONTACTS' | translate }}
+  </button>
 </div>
-  
