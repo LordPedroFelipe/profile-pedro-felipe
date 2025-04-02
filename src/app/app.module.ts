@@ -29,6 +29,7 @@ import { IdiomasComponent } from './pages/idiomas/idiomas.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ResumoComponent } from './pages/resumo/resumo.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { DownloadCvComponent } from './components/download-cv/download-cv.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -47,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContatosComponent,
     CarrosselImagensComponent,
     NasaApodComponent,
+    DownloadCvComponent,
   ],
   imports: [
     HttpClientModule,

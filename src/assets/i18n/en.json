@@ -117,5 +117,25 @@
       "DATE": "Date: 01/2010 - 12/2011",
       "COURSE": "Computer technical course"
     }
-  ]
+  ],
+  "DOWNLOAD": {
+    "TITLE": "Download Resume",
+    "PT": "Download in Portuguese",
+    "EN": "Download in English"
+  },
+  "NASA_COMPONENT": {
+    "TITLE": "Astronomy Picture of the Day",
+    "SUB_TITLE": "Example of API consumption with Angular and TypeScript",
+    "DATE": "Select Date"
+  },
+  "LANGUAGES": {
+    "TITLE": "Languages",
+    "CARD_TITLE": "Languages Pedro Felipe - Senior Frontend Developer",
+    "PORTUGUESE": "Portuguese - Native",
+    "ENGLISH": "English - Advanced"
+  },
+  "CONTACTS": {
+    "TITLE": "Contacts",
+    "SUB_TITLE": "Contacts Pedro Felipe - Senior Frontend Developer"
+  }
 }
