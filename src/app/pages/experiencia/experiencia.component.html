@@ -1,3 +1,7 @@
+<mat-toolbar color="primary">
+  <span>{{ 'EXPERIENCE_TITLE' | translate }}</span>
+</mat-toolbar>
+
 <div *ngFor="let job of 'EXPERIENCE' | translate; let jobIndex = index" class="wrapper">
   <div class="foto-container" *ngIf="jobIndex % 2 === 0">
     <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
