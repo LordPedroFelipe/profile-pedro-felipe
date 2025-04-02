@@ -9,9 +9,13 @@ export class CarrosselImagensComponent {
   imagens: string[] = [
     'assets/img/PedroFelipe.PNG',
     'assets/img/PedroFelipeDev.PNG',
+    'assets/img/PedroCruzeiroFamilia.PNG',
     'assets/img/Familia.jpg',
-    'assets/img/CasasBahia.PNG',
-    'assets/img/Opah.PNG'
+    'assets/img/PedroFelipeGLA250.PNG',
+    'assets/img/CruzeiroPedroCarol.PNG',
+    'assets/img/angulartop.PNG',
+    'assets/img/Via.PNG',
+    'assets/img/OPAH.PNG'
   ];
 
   imagemAtual = 0;

@@ -118,6 +118,26 @@
       "DATE": "Data: 01/2010 - 12/2011",
       "COURSE": "Curso técnico em informática"
     }
-  ]
+  ],
+  "DOWNLOAD": {
+    "TITLE": "Baixar Currículo",
+    "PT": "Download em Português",
+    "EN": "Download em Inglês"
+  },
+  "NASA_COMPONENT": {
+    "TITLE": "Imagem do Dia da NASA",
+    "SUB_TITLE": "Exemplo de consumo de API com Angular e TypeScript",
+    "DATE": "Selecione a Data"
+  },
+  "LANGUAGES": {
+    "TITLE": "Idiomas",
+    "CARD_TITLE": "Idiomas Pedro Felipe",
+    "PORTUGUESE": "Português - Nativo",
+    "ENGLISH": "Inglês - Avançado"
+  },
+  "CONTACTS": {
+    "TITLE": "Contatos",
+    "SUB_TITLE": "Contatos Pedro Felipe"
+  }
 }
   
