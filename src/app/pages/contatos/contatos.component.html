@@ -1,40 +1,43 @@
 <mat-toolbar color="primary">
-    <span>{{ 'CONTACTS.TITLE' | translate }}</span>
-  </mat-toolbar>
-  
-  <div class="container">
-    <mat-card class="card">
-      <mat-card-title>{{ 'CONTACTS.SUB_TITLE' | translate }}</mat-card-title>
-      <mat-card-content>
-        <p>
-            <mat-icon>phone</mat-icon>
-            <a href="https://wa.me/5547997716565" target="_blank" rel="noopener">
-            +55 47 99771 6565
-            </a>
-        </p>
+  <span>{{ 'CONTACTS.TITLE' | translate }}</span>
+</mat-toolbar>
 
-        <p>
-            <mat-icon svgIcon="captive_portal"></mat-icon>
-            <a href="https://www.linkedin.com/in/pedrofelipeti" target="_blank" rel="noopener">
-            Linkedin
-            </a>
-        </p>
-
-        <p>
-            <mat-icon svgIcon="nest_heat_link_gen_3"></mat-icon>
-            <a href="https://www.instagram.com/pedrofelipedev" target="_blank" rel="noopener">
-            Instagram
-            </a>
-        </p>
-
-        <p>
-            <mat-icon svgIcon="nest_heat_link_gen_3"></mat-icon>
-            <a href="https://github.com/LordPedroFelipe" target="_blank" rel="noopener">
-            Github
-            </a>
-        </p>
-        
-      </mat-card-content>
-    </mat-card>
-  </div>
+<div class="container">
+  <mat-card class="card">
+    <mat-card-title>{{ 'CONTACTS.SUB_TITLE' | translate }}</mat-card-title>
+    <mat-card-content>
+      <p>
+        <mat-icon>phone</mat-icon>
+        <a href="https://wa.me/5547997716565" target="_blank" rel="noopener">
+        +55 47 99771 6565
+        </a>
+      </p>
+      <p>
+        <img src="../../../assets/img/linkedin.png" alt="Imagem do linkedin" class="imagem-carrossel"/>
+        <a href="https://www.linkedin.com/in/pedrofelipeti" target="_blank" rel="noopener">
+        Linkedin
+        </a>
+      </p>
+      <p>
+        <img src="../../../assets/img/instagram.jpg" alt="Imagem do instagram" class="imagem-carrossel"/>
+        <a href="https://www.instagram.com/pedrofelipedev" target="_blank" rel="noopener">
+        Instagram
+        </a>
+      </p>
+      <p>
+        <img src="../../../assets/img/git.png" alt="Imagem do github" class="imagem-carrossel"/>
+        <a href="https://github.com/LordPedroFelipe" target="_blank" rel="noopener">
+        Github
+        </a>
+      </p>
+      <p>
+        <img src="../../../assets/img/email.png" alt="Ícone de e-mail" class="imagem-carrossel" />
+        <a href="mailto:pf.souza15@gmail.com" target="_blank" rel="noopener">
+          pf.souza15@gmail.com
+        </a>
+      </p>
+      <app-download-cv></app-download-cv>
+    </mat-card-content>
+  </mat-card>
+</div>
   
