@@ -1,7 +1,7 @@
 {
   "TITLE": "Pedro Felipe - Senior Frontend Developer",
   "HELLO": "Hello,",
-  "INTRO": "My name is Pedro Felipe, I'm from Brazil and I work as a Senior Software Engineer, with 12 years of experience focused on frontend and backend development.",
+  "INTRO": "My name is Pedro Felipe, I'm from Brazil and I work as a Senior Software Developer, with 12 years of experience focused on frontend and backend development.",
   "TECH_DESC": "I specialize in technologies such as Angular (15+), TypeScript and Node.js, with solid experience in creating scalable, high-performance and high-quality solutions. I also have skills in systems architecture and technical leadership, always seeking to add value to the teams I work with.",
   "LOCATION": "Joinville, Santa Catarina, Brazil",
 
@@ -15,6 +15,10 @@
   "PUBLICATIONS": "Publications",
   "PUBLICATION_1": "Guide to integrating Microsoft MSAL Authentication with Angular 15 and MicroFrontend Nx.Dev",
   "PUBLICATION_2": "Tutorial to Creating an Angular Project with Nx.dev (Module Federation)",
+  "PUBLICATION_3": "How to Create an Angular Component Library Using Nx.dev and Module Federation",
+  "PUBLICATION_SUB_1": "Authentication with Angular and MicroFrontend Nx.Dev",
+  "PUBLICATION_SUB_2": "Creating an Angular Project with Nx.dev",
+  "PUBLICATION_SUB_3": "Angular Component Library",
 
   "PHOTOS": "Photos",
   "NASA": "NASA APOD Picture of the Day",
@@ -105,7 +109,7 @@
     {
       "INSTITUTION": "Anhanguera Educacional",
       "DATE": "Date: 01/2014 - 12/2017",
-      "COURSE": "Bachelor's Degree in Software Analysis and Development"
+      "COURSE": "Technologist in Systems Analysis and Development"
     },
     {
       "INSTITUTION": "Senac Brazil",
