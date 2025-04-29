@@ -1,7 +1,7 @@
 {
     "TITLE": "Pedro Felipe - Desenvolvedor Frontend Sênior",
     "HELLO": "Olá,",
-    "INTRO": "Meu nome é Pedro Felipe, sou do Brasil e atuo como Engenheiro de Software Sênior, com 12 anos de experiência focado em desenvolvimento frontend e backend.",
+    "INTRO": "Meu nome é Pedro Felipe, sou do Brasil e atuo como Desenvolvedor de Software Sênior, com 12 anos de experiência focado em desenvolvimento frontend e backend.",
     "TECH_DESC": "Sou especialista em tecnologias como Angular (15+), TypeScript e Node.js, com sólida experiência na criação de soluções escaláveis, de alto desempenho e alta qualidade. Também tenho habilidades em arquitetura de sistemas e liderança técnica, sempre buscando agregar valor às equipes em que atuo.",
     "LOCATION": "Joinville, Santa Catarina, Brasil",
   
@@ -15,7 +15,11 @@
     "PUBLICATIONS": "Publicações",
     "PUBLICATION_1": "Guia de integração do Microsoft MSAL com Angular 15 e MicroFrontend Nx.Dev",
     "PUBLICATION_2": "Tutorial para criação de projeto Angular com Nx.dev (Module Federation)",
-  
+    "PUBLICATION_3": "Como Criar uma Biblioteca de Componentes Angular Usando Nx.dev e Module Federation",
+    "PUBLICATION_SUB_1": "Autenticação com Angular e MicroFrontend Nx.Dev",
+    "PUBLICATION_SUB_2": "Criando um Projeto Angular com Nx.dev",
+    "PUBLICATION_SUB_3": "Biblioteca de Componentes Angular",
+
     "PHOTOS": "Fotos",
     "NASA": "Imagem do Dia (NASA APOD)",
     "EXPERIENCE_TITLE": "Com 12 anos de experiência",
@@ -106,7 +110,7 @@
     {
       "INSTITUTION": "Anhanguera Educacional",
       "DATE": "Data: 01/2014 - 12/2017",
-      "COURSE": "Bacharelado em Análise e Desenvolvimento de Sistemas"
+      "COURSE": "Tecnólogo em Análise e Desenvolvimento de Sistemas"
     },
     {
       "INSTITUTION": "Senac Brasil",
