@@ -1,0 +1,17 @@
+.download-card {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  
+    .download-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  

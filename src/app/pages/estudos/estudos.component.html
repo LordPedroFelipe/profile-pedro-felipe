@@ -1,1 +1,13 @@
-<p>estudos works!</p>
+<mat-toolbar color="primary">
+  <span>{{ 'STUDIES_TITLE' | translate }}</span>
+</mat-toolbar>
+
+<div *ngFor="let study of 'STUDIES' | translate" class="container">
+  <mat-card class="card">
+    <mat-card-title>{{ study.INSTITUTION }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ study.DATE }}</p>
+      <p>{{ study.COURSE }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,147 @@
+{
+    "TITLE": "Pedro Felipe - Desenvolvedor Frontend Sênior",
+    "HELLO": "Olá,",
+    "INTRO": "Meu nome é Pedro Felipe, sou do Brasil e atuo como Desenvolvedor de Software Sênior, com 12 anos de experiência focado em desenvolvimento frontend e backend.",
+    "TECH_DESC": "Sou especialista em tecnologias como Angular (15+), TypeScript e Node.js, com sólida experiência na criação de soluções escaláveis, de alto desempenho e alta qualidade. Também tenho habilidades em arquitetura de sistemas e liderança técnica, sempre buscando agregar valor às equipes em que atuo.",
+    "LOCATION": "Joinville, Santa Catarina, Brasil",
+  
+    "SUMMARY": "Resumo",
+    "SUMMARY_1": "Analista de Sistemas experiente com forte atuação no desenvolvimento de sistemas WEB robustos, utilizando banco de dados Caché e domínio em HTML, Javascript, CSS e JQuery.",
+    "SUMMARY_2": "Ampla experiência na área da Saúde, com foco em análise e desenvolvimento de sistemas usando banco Caché, programação orientada a objetos e metodologias analíticas avançadas.",
+    "SUMMARY_3": "Histórico comprovado de entrega bem-sucedida de diversos projetos, utilizando tecnologias como HTML5, CSS3, Bootstrap, JavaScript, JQuery, Angular, NodeJS, PostgreSQL, MongoDB, entre outras.",
+    "SUMMARY_4": "Atualmente faço parte de um time ágil, contribuindo ativamente em diversos projetos com foco em análise e desenvolvimento frontend, com domínio em TypeScript, Angular e Git.",
+  
+    "SKILLS": "Habilidades",
+    "PUBLICATIONS": "Publicações",
+    "PUBLICATION_1": "Guia de integração do Microsoft MSAL com Angular 15 e MicroFrontend Nx.Dev",
+    "PUBLICATION_2": "Tutorial para criação de projeto Angular com Nx.dev (Module Federation)",
+    "PUBLICATION_3": "Como Criar uma Biblioteca de Componentes Angular Usando Nx.dev e Module Federation",
+    "PUBLICATION_SUB_1": "Autenticação com Angular e MicroFrontend Nx.Dev",
+    "PUBLICATION_SUB_2": "Criando um Projeto Angular com Nx.dev",
+    "PUBLICATION_SUB_3": "Biblioteca de Componentes Angular",
+
+    "PHOTOS": "Fotos",
+    "NASA": "Imagem do Dia (NASA APOD)",
+    "EXPERIENCE_TITLE": "Com 12 anos de experiência",
+    "EXPERIENCE": [
+      {
+        "TITLE": "Engenheiro de Software Frontend - Angular 9+, Typescript",
+        "DATE": "Data: 10/2022 - Atualmente",
+        "COMPANY": "Empresa: Via Varejo - Casas Bahia",
+        "DESCRIPTION": [
+          "Descrição: Engenheiro de Software Frontend Sênior",
+          "Tecnologias utilizadas: Angular, Typescript, Git, SCRUM, entre outras...",
+          "Trabalho com Arquitetura de novos projetos, MicroFrontend com Module Federation e Nx.Dev",
+          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
+          "Foco em análise e desenvolvimento frontend.",
+          "Atuação na SQUAD da Plataforma de Seguros e Serviços."
+        ]
+      },
+      {
+        "TITLE": "Desenvolvedor Frontend Sênior",
+        "DATE": "Data: 08/2021 - 10/2022",
+        "COMPANY": "Empresa: OPAH TI",
+        "DESCRIPTION": [
+          "Descrição: Analista Desenvolvedor Frontend",
+          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
+          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
+          "Foco em análise e desenvolvimento frontend."
+        ]
+      },
+      {
+        "TITLE": "Desenvolvedor Frontend Sênior",
+        "DATE": "Data: 10/2020 - 09/2021",
+        "COMPANY": "Empresa: Nexo AI",
+        "DESCRIPTION": [
+          "Descrição: Analista Desenvolvedor Frontend",
+          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
+          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
+          "Foco em análise e desenvolvimento frontend."
+        ]
+      },
+      {
+        "TITLE": "Desenvolvedor Frontend Sênior",
+        "DATE": "Data: 03/2020 - 01/2021",
+        "COMPANY": "Empresa: Becomex Lab",
+        "DESCRIPTION": [
+          "Descrição: Analista Desenvolvedor Frontend",
+          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
+          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
+          "Foco em análise e desenvolvimento frontend."
+        ]
+      },
+      {
+        "TITLE": "Desenvolvedor FullStack",
+        "DATE": "Data: 02/2014 - 03/2020",
+        "COMPANY": "Empresa: Micromed Sistemas Ltda",
+        "DESCRIPTION": [
+          "Descrição: Analista Desenvolvedor FullStack",
+          "Criação de diversos projetos com tecnologias como:",
+          "HTML5, CSS3, Bootstrap, JavaScript, Jquery, TypeScript, Angular, NodeJS, Postgresql, MongoDB entre outras."
+        ]
+      },
+      {
+        "TITLE": "Desenvolvedor Web",
+        "DATE": "Data: 03/2012 - 12/2013",
+        "COMPANY": "Empresa: Web Mais Sistemas",
+        "DESCRIPTION": [
+          "Descrição: Analista Desenvolvedor Web",
+          "Desenvolvimento de back-end e banco de dados com tecnologia Intersystems Cache.",
+          "Desenvolvimento com Javascript, HTML, CSS e componentização no Front-end.",
+          "Atuei na correção de chamados e melhorias no sistema ERP da empresa em diversos módulos, entendendo as necessidades do cliente e implementando da melhor forma no código-fonte."
+        ]
+      }
+    ],
+    "MENU": {
+        "PROFILE": "Perfil",
+        "EXPERIENCE": "Experiência",
+        "STUDIES": "Estudos",
+        "LANGUAGES": "Idiomas",
+        "CONTACTS": "Contatos"
+    },
+    
+  "STUDIES_TITLE": "Formação acadêmica concluída",
+  "STUDIES": [
+    {
+      "INSTITUTION": "Anhanguera Educacional",
+      "DATE": "Data: 01/2018 - 12/2019",
+      "COURSE": "Pós-graduação MBA em Gestão Estratégica de Negócios"
+    },
+    {
+      "INSTITUTION": "Anhanguera Educacional",
+      "DATE": "Data: 01/2014 - 12/2017",
+      "COURSE": "Tecnólogo em Análise e Desenvolvimento de Sistemas"
+    },
+    {
+      "INSTITUTION": "Senac Brasil",
+      "DATE": "Data: 01/2013 - 12/2013",
+      "COURSE": "Tecnólogo em Gestão da Tecnologia da Informação"
+    },
+    {
+      "INSTITUTION": "SATC",
+      "DATE": "Data: 01/2010 - 12/2011",
+      "COURSE": "Curso técnico em informática"
+    }
+  ],
+  "DOWNLOAD": {
+    "TITLE": "Baixar Currículo",
+    "PT": "Download em Português",
+    "EN": "Download em Inglês"
+  },
+  "NASA_COMPONENT": {
+    "TITLE": "Imagem do Dia da NASA",
+    "SUB_TITLE": "Exemplo de consumo de API com Angular e TypeScript",
+    "DATE": "Selecione a Data"
+  },
+  "LANGUAGES": {
+    "TITLE": "Idiomas",
+    "CARD_TITLE": "Idiomas Pedro Felipe",
+    "PORTUGUESE": "Português - Nativo",
+    "ENGLISH": "Inglês - Avançado"
+  },
+  "CONTACTS": {
+    "TITLE": "Contatos",
+    "SUB_TITLE": "Contatos Pedro Felipe"
+  }
+}
+  
