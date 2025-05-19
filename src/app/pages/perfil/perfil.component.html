@@ -7,7 +7,7 @@
       <img src="assets/img/PedroFelipe.PNG" alt="Pedro Photo Profile" />
     </div>
   
-    <mat-card class="profile-card">
+    <mat-card class="profile-card observed-card">
       <mat-card-title>{{ 'HELLO' | translate }}</mat-card-title>
       <mat-card-title>{{ 'INTRO' | translate }}</mat-card-title>
       <mat-card-content>
@@ -15,9 +15,9 @@
         <p>{{ 'LOCATION' | translate }}</p>
       </mat-card-content>
     </mat-card>
-  </div>
+  </div>  
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card">
     <mat-card-title>{{ 'SUMMARY' | translate }}</mat-card-title>
     <mat-card-content>
       <p>{{ 'SUMMARY_1' | translate }}</p>
@@ -27,7 +27,7 @@
     </mat-card-content>
   </mat-card>
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card" id="skills-section">
     <mat-card-title>{{ 'SKILLS' | translate }}</mat-card-title>
     <mat-card-content>
       <p>
@@ -48,11 +48,12 @@
         <button mat-raised-button class="skill-button">Git/Github/GitLab</button>
         <button mat-raised-button class="skill-button">Angular Material</button>
         <button mat-raised-button class="skill-button">Bootstrap</button>
+        <button mat-raised-button class="skill-button">PrimeNG</button>
       </p>
     </mat-card-content>
   </mat-card>
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card">
     <mat-card-title>{{ 'PUBLICATIONS' | translate }}</mat-card-title>
     <mat-card-content>
       <p>{{ 'PUBLICATION_1' | translate }}</p>
@@ -76,7 +77,7 @@
     </mat-card-content>
   </mat-card>
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card">
     <mat-card-title>{{ 'DOWNLOAD.TITLE' | translate }}</mat-card-title>
     <mat-card-content>
         <app-download-cv></app-download-cv>
@@ -84,16 +85,21 @@
   </mat-card>
   
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card">
     <mat-card-title>{{ 'PHOTOS' | translate }}</mat-card-title>
     <mat-card-content>
       <app-carrossel-imagens></app-carrossel-imagens>
     </mat-card-content>
   </mat-card>
   
-  <mat-card class="resumo-card">
+  <mat-card class="resumo-card observed-card">
     <mat-card-content>
       <app-nasa-apod></app-nasa-apod>
     </mat-card-content>
   </mat-card>
   
+  <!--mat-card class="resumo-card observed-card">
+    <mat-card-content>
+      <app-weather></app-weather>
+    </mat-card-content>
+  </mat-card-->

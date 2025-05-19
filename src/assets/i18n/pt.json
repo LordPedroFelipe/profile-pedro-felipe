@@ -131,7 +131,9 @@
   "NASA_COMPONENT": {
     "TITLE": "Imagem do Dia da NASA",
     "SUB_TITLE": "Exemplo de consumo de API com Angular e TypeScript",
-    "DATE": "Selecione a Data"
+    "DATE": "Selecione a Data",
+    "CARREGANDO": "Carregando imagem...",
+    "IMG_ERROR": "Não foi possível carregar a imagem do dia. Tente outra data ou volte mais tarde."
   },
   "LANGUAGES": {
     "TITLE": "Idiomas",
@@ -142,6 +144,15 @@
   "CONTACTS": {
     "TITLE": "Contatos",
     "SUB_TITLE": "Contatos Pedro Felipe"
+  },
+  "WEATHER": {
+    "TITLE": "Tempo por Cidade",
+    "SUB_TITLE": "Tempo em",
+    "TEMPERATURE": "Temperatura",
+    "SENSATION": "Sensação térmica",
+    "DESCRIPTION": "Descrição",
+    "HUMIDITY": "Umidade",
+    "WIND": "Velocidade do vento"
   }
 }
   
