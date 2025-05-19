@@ -13,21 +13,46 @@
   </mat-form-field>
 </div>
 
-<mat-spinner *ngIf="loading$ | async" diameter="48"></mat-spinner>
-
-<mat-card *ngIf="apod$ | async as apod">
+<!--mat-spinner *ngIf="loading$ | async" diameter="48"></mat-spinner-->
+<mat-card *ngIf="(apod$ | async) as apod; else loadingCard">
   <mat-card-header>
     <mat-card-title>{{ apod.title }}</mat-card-title>
     <mat-card-subtitle>{{ apod.date }}</mat-card-subtitle>
   </mat-card-header>
 
-  <img *ngIf="apod.media_type === 'image'" [src]="apod.url" [alt]="apod.title" />
+  <!-- Enquanto a imagem carrega -->
+  <div class="image-loader" *ngIf="(imageLoading$ | async)">
+    <mat-spinner diameter="32"></mat-spinner>
+    <p>
+      {{ 'NASA_COMPONENT.CARREGANDO' | translate }}
+    </p>
+  </div>
+
+  <!-- Imagem carregada com sucesso -->
+  <img
+    *ngIf="apod.media_type === 'image' && !(imageError$ | async)"
+    [src]="apod.url"
+    [alt]="apod.title"
+    (load)="onImageLoad()"
+    (error)="onImageError()" />
+
+  <!-- Caso a imagem falhe ao carregar -->
+  <div *ngIf="imageError$ | async" class="error">
+    {{ 'NASA_COMPONENT.IMG_ERROR' | translate }}
+  </div>
 
   <mat-card-content>
     <p>{{ apod.explanation }}</p>
     <p *ngIf="apod.copyright">© {{ apod.copyright }}</p>
   </mat-card-content>
 </mat-card>
+
+<ng-template #loadingCard>
+  <div class="image-loader" *ngIf="imageLoading$ | async">
+    <mat-spinner diameter="48"></mat-spinner>
+    <p>{{ 'NASA_COMPONENT.CARREGANDO' | translate }}</p>
+  </div>
+</ng-template>
 
 <div class="error" *ngIf="error$ | async as errorMsg">
   {{ errorMsg }}

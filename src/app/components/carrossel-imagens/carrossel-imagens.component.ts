@@ -14,6 +14,7 @@ export class CarrosselImagensComponent {
     'assets/img/PedroFelipeGLA250.PNG',
     'assets/img/CruzeiroPedroCarol.PNG',
     'assets/img/angulartop.PNG',
+    'assets/img/PF-512x512.png',
   ];
 
   imagemAtual = 0;

@@ -130,7 +130,9 @@
   "NASA_COMPONENT": {
     "TITLE": "Astronomy Picture of the Day",
     "SUB_TITLE": "Example of API consumption with Angular and TypeScript",
-    "DATE": "Select Date"
+    "DATE": "Select Date",
+    "CARREGANDO": "Loading...",
+    "IMG_ERROR": "Unable to load image of the day. Try another date or come back later."
   },
   "LANGUAGES": {
     "TITLE": "Languages",
@@ -141,5 +143,14 @@
   "CONTACTS": {
     "TITLE": "Contacts",
     "SUB_TITLE": "Contacts Pedro Felipe - Senior Frontend Developer"
+  },
+  "WEATHER": {
+    "TITLE": "Weather by City",
+    "SUB_TITLE": "Weather in",
+    "TEMPERATURE": "Temperature",
+    "SENSATION": "Thermal sensation",
+    "DESCRIPTION": "Description",
+    "HUMIDITY": "Humidity",
+    "WIND": "Wind speed"
   }
 }
