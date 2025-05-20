@@ -132,7 +132,9 @@
     "SUB_TITLE": "Example of API consumption with Angular and TypeScript",
     "DATE": "Select Date",
     "CARREGANDO": "Loading...",
-    "IMG_ERROR": "Unable to load image of the day. Try another date or come back later."
+    "IMG_ERROR": "Unable to load image of the day. Try another date or come back later.",
+    "MIDIA_NAO_SUPORTADA": "This media type is not supported for direct viewing.",
+    "VER_CONTEUDO_EXTERNO": "Click here to view the content on the NASA website."
   },
   "LANGUAGES": {
     "TITLE": "Languages",

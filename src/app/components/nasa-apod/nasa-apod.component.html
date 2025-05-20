@@ -36,6 +36,28 @@
     (load)="onImageLoad()"
     (error)="onImageError()" />
 
+  <!-- Vídeo embutido (YouTube/Vimeo) -->
+  <iframe
+    *ngIf="apod.media_type === 'video'"
+    [src]="apod.url"
+    width="100%"
+    height="400"
+    frameborder="0"
+    allowfullscreen
+    (load)="onImageLoad()"
+    (error)="onImageError()">
+  </iframe>
+
+  <!-- Conteúdo não suportado -->
+  <div *ngIf="apod.media_type === 'other'" class="not-supported">
+    <p>
+      {{ 'NASA_COMPONENT.MIDIA_NAO_SUPORTADA' | translate }}
+    </p>
+    <a *ngIf="apod.url" [href]="apod.url" target="_blank" rel="noopener">
+      {{ 'NASA_COMPONENT.VER_CONTEUDO_EXTERNO' | translate }}
+    </a>
+  </div>
+
   <!-- Caso a imagem falhe ao carregar -->
   <div *ngIf="imageError$ | async" class="error">
     {{ 'NASA_COMPONENT.IMG_ERROR' | translate }}
