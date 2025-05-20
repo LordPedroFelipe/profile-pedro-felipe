@@ -60,6 +60,7 @@ export class NasaApodComponent implements OnInit {
   
     return this.nasaService.getApodByDate(data).pipe(
       switchMap(async apod => {
+        // console.log(apod);
         const lang = this.translateService.currentLang || this.translateService.getDefaultLang();
   
         /*if (lang === 'pt') {
@@ -74,6 +75,10 @@ export class NasaApodComponent implements OnInit {
   
         this.apod$.next(apod);
         this.loading$.next(false);
+
+        if (apod.media_type === 'other') {
+          this.imageLoading$.next(false);
+        }
         return;
       }),
       catchError(err => {

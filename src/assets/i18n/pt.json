@@ -133,7 +133,9 @@
     "SUB_TITLE": "Exemplo de consumo de API com Angular e TypeScript",
     "DATE": "Selecione a Data",
     "CARREGANDO": "Carregando imagem...",
-    "IMG_ERROR": "Não foi possível carregar a imagem do dia. Tente outra data ou volte mais tarde."
+    "IMG_ERROR": "Não foi possível carregar a imagem do dia. Tente outra data ou volte mais tarde.",
+    "MIDIA_NAO_SUPORTADA": "Este tipo de mídia não é suportado para visualização direta.",
+    "VER_CONTEUDO_EXTERNO": "Clique aqui para visualizar o conteúdo no site da NASA."
   },
   "LANGUAGES": {
     "TITLE": "Idiomas",

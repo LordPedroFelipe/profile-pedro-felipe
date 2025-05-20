@@ -9,6 +9,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 ;
+    }
+}
+
 mat-card {
     margin-top: 20px;
 }
