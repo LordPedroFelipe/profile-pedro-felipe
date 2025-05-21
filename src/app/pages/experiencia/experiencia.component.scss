@@ -65,3 +65,15 @@
       max-width: 100%;
     }
 }
+
+.observed-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

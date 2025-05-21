@@ -2,22 +2,23 @@
   <span>{{ 'EXPERIENCE_TITLE' | translate }}</span>
 </mat-toolbar>
 
-<div *ngFor="let job of 'EXPERIENCE' | translate; let jobIndex = index" class="wrapper">
-  <div class="foto-container" *ngIf="jobIndex % 2 === 0">
-    <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
-  </div>
+<div id="experience-section">
+  <div *ngFor="let job of 'EXPERIENCE' | translate; let jobIndex = index" class="wrapper">
+    <div class="foto-container" *ngIf="jobIndex % 2 === 0">
+      <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
+    </div>
 
-  <mat-card class="card">
-    <mat-card-title>{{ job.TITLE }}</mat-card-title>
-    <mat-card-title>{{ job.DATE }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ job.COMPANY }}</p>
-      <p *ngFor="let desc of job.DESCRIPTION">{{ desc }}</p>
-    </mat-card-content>
-  </mat-card>
+    <mat-card class="card observed-card">
+      <mat-card-title>{{ job.TITLE }}</mat-card-title>
+      <mat-card-title>{{ job.DATE }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ job.COMPANY }}</p>
+        <p *ngFor="let desc of job.DESCRIPTION">{{ desc }}</p>
+      </mat-card-content>
+    </mat-card>
 
-  <div class="foto-container-direita" *ngIf="jobIndex % 2 !== 0">
-    <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
+    <div class="foto-container-direita" *ngIf="jobIndex % 2 !== 0">
+      <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
+    </div>
   </div>
 </div>
-  
