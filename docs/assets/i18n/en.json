@@ -125,7 +125,8 @@
   "DOWNLOAD": {
     "TITLE": "Download Resume",
     "PT": "Download in Portuguese",
-    "EN": "Download in English"
+    "EN": "Download in English",
+    "EN_SIMPLE": "Download in English (Simplified)"
   },
   "NASA_COMPONENT": {
     "TITLE": "Astronomy Picture of the Day",
