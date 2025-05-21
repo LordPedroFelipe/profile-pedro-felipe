@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Run Build for Automatic Deploy on Git
 
 `nvs use 19.4.0`
-`ng build --output-path docs --base-href profile-pedro-felipe`
+`ng build --output-path docs --base-href /profile-pedro-felipe/`
