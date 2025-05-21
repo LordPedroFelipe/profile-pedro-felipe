@@ -3,7 +3,7 @@
 </mat-toolbar>
 
 <div id="experience-section">
-  <div *ngFor="let job of 'EXPERIENCE' | translate; let jobIndex = index" class="wrapper">
+  <div class="wrapper" *ngFor="let job of experiences; let jobIndex = index">
     <div class="foto-container" *ngIf="jobIndex % 2 === 0">
       <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
     </div>
