@@ -1,0 +1,13 @@
+
+
+- Adicionar Loading no NASA img - FEito
+- Adicionar animação ao mostrar o conteudo - FEito
+- Arrumar Responsividade do Mobile - Feito
+- Botar novos links do Medium
+- Adicionar novo Resumo padrão
+- Arrumar Formato da Data do Nasa picture Day - Feito
+- Adicionar novas Skills - Feito
+- Corrigido problema de Redirecionamento - Feito
+- Terminar componente de Tempo
+
+

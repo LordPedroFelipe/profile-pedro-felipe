@@ -126,7 +126,8 @@
   "DOWNLOAD": {
     "TITLE": "Baixar Currículo",
     "PT": "Download em Português",
-    "EN": "Download em Inglês"
+    "EN": "Download em Inglês",
+    "EN_SIMPLE": "Download em Inglês (Simplificado)"
   },
   "NASA_COMPONENT": {
     "TITLE": "Imagem do Dia da NASA",
