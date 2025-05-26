@@ -27,3 +27,38 @@ mat-icon {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+.logo-container {
+  perspective: 1000px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #001f5c 0%, #000d2b 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.logo {
+  width: 310px;
+  height: 310px;
+  transform-style: preserve-3d;
+  animation: rotate3D 8s linear infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes rotate3D {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(10deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+}
