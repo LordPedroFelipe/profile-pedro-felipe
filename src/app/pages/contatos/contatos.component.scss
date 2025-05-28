@@ -6,6 +6,7 @@
 .card {
   padding: 16px;
   margin-bottom: 24px;
+  background-color: #F3F4F6;
 }
 
 .full-width {
@@ -61,4 +62,15 @@ mat-icon {
   100% {
     transform: rotateY(360deg) rotateX(0deg);
   }
+}
+
+.observed-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
