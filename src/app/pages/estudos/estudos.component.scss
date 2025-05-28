@@ -6,10 +6,21 @@
 .card {
     padding: 16px;
     margin-bottom: 24px;
+    background-color: #F3F4F6;
 }
 
 .full-width {
     width: 100%;
     margin-bottom: 16px;
 }
+
+.observed-card {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
   
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

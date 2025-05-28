@@ -120,6 +120,21 @@
       "INSTITUTION": "SATC",
       "DATE": "Date: 01/2010 - 12/2011",
       "COURSE": "Computer technical course"
+    },
+    {
+      "INSTITUTION": "Udemy.com",
+      "DATE": "06/2015",
+      "COURSE": "Complete NodeJS and MongoDB Developer Course"
+    },
+    {
+      "INSTITUTION": "Udemy.com",
+      "DATE": "04/2016",
+      "COURSE": "Complete Web Development Course 2018 - Create 6 Projects"
+    },
+    {
+      "INSTITUTION": "Udemy.com",
+      "DATE": "08/2017",
+      "COURSE": "Angular 9 Essencial"
     }
   ],
   "DOWNLOAD": {

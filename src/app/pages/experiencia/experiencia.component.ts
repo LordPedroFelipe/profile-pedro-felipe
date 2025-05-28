@@ -35,7 +35,7 @@ export class ExperienciaComponent implements AfterViewInit {
           cardObserver.unobserve(entry.target); // Anima apenas uma vez
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.9 });
   
     cards.forEach(card => cardObserver.observe(card));
   }
