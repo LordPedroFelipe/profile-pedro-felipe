@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AnimationObserverService } from 'src/app/services/animation-observer.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,37 +8,15 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent implements AfterViewInit {
-  @ViewChild('experienceSection', { static: false }) experienceSection!: ElementRef;
   experiences: any[] = [];
-
-  constructor(private translate: TranslateService) {}
-
-  ngOnInit(): void {
-    this.carregarExperiencias();
-  
-    // Atualiza experiências quando trocar de idioma
-    this.translate.onLangChange.subscribe(() => {
-      this.carregarExperiencias();
-    });
-  }
+  constructor(
+    private animationService: AnimationObserverService,
+    private translate: TranslateService
+  ) {}
 
   ngAfterViewInit(): void {
-    setTimeout(() => this.observarAnimacaoCards(), 0);
-  }
-
-  private observarAnimacaoCards(): void {
-    const cards = document.querySelectorAll('.observed-card');
-  
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          cardObserver.unobserve(entry.target); // Anima apenas uma vez
-        }
-      });
-    }, { threshold: 0.9 });
-  
-    cards.forEach(card => cardObserver.observe(card));
+    this.carregarExperiencias();
+    setTimeout(() => this.animationService.observarAnimacaoCards(), 0);
   }
 
   carregarExperiencias(): void {
@@ -45,8 +24,7 @@ export class ExperienciaComponent implements AfterViewInit {
       this.experiences = res;
   
       // Aguarda o DOM renderizar os novos cards antes de observar
-      setTimeout(() => this.observarAnimacaoCards(), 0);
+      setTimeout(() => this.animationService.observarAnimacaoCards(), 0);
     });
   }
-  
 }
