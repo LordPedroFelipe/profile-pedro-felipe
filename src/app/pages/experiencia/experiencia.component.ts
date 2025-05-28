@@ -1,5 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { AnimationObserverService } from 'src/app/services/animation-observer.service';
 
 @Component({
@@ -7,8 +8,10 @@ import { AnimationObserverService } from 'src/app/services/animation-observer.se
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.scss']
 })
-export class ExperienciaComponent implements AfterViewInit {
+export class ExperienciaComponent implements AfterViewInit, OnDestroy {
   experiences: any[] = [];
+  private langChangeSub!: Subscription;
+
   constructor(
     private animationService: AnimationObserverService,
     private translate: TranslateService
@@ -16,15 +19,25 @@ export class ExperienciaComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.carregarExperiencias();
-    setTimeout(() => this.animationService.observarAnimacaoCards(), 0);
+
+    // Escuta troca de idioma
+    this.langChangeSub = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.carregarExperiencias();
+    });
   }
 
   carregarExperiencias(): void {
     this.translate.get('EXPERIENCE').subscribe((res: any[]) => {
       this.experiences = res;
-  
-      // Aguarda o DOM renderizar os novos cards antes de observar
-      setTimeout(() => this.animationService.observarAnimacaoCards(), 0);
+
+      // Aguarda renderização dos cards
+      setTimeout(() => this.animationService.observarAnimacaoCards(), 100);
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.langChangeSub) {
+      this.langChangeSub.unsubscribe();
+    }
   }
 }
