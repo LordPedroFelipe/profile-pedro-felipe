@@ -14,8 +14,10 @@ export class NasaService {
 
   getApodByDate(date?: string): Observable<Apod> {
     let params = new HttpParams().set('api_key', this.apiKey);
+  
     if (date) {
-      params = params.set('date', date);
+      const formattedDate = date.toISOString().split('T')[0];
+      params = params.set('date', formattedDate);
     }
 
     return this.http.get<Apod>(this.apiUrl, { params });
