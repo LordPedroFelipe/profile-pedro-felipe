@@ -82,9 +82,9 @@ export class NasaApodComponent implements OnInit {
         return;
       }),
       catchError(err => {
-        const mensagemErro = data
-          ? 'Erro ao buscar imagem para a data selecionada.'
-          : 'Erro ao buscar imagem do dia.';
+        const mensagemErro = err.msg
+          ? err.msg
+          : 'Não encontramos imagem para a data | No data available for date';
         this.error$.next(mensagemErro);
         this.loading$.next(false);
         this.imageLoading$.next(false);
