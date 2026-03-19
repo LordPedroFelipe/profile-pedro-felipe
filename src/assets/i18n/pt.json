@@ -14,7 +14,7 @@
   },
   "PROFILE": {
     "KICKER": "Senior Frontend Engineer",
-    "TITLE": "Pedro Felipe constrói experiências frontend robustas, escaláveis e com padrão de produto maduro.",
+    "TITLE": "Pedro Felipe, tenho experiências frontend robustas, escaláveis e com padrão de produto maduro.",
     "SUBTITLE": "Mais de 12 anos entregando aplicações web, arquitetura evolutiva, micro frontends, excelência em Angular e colaboração forte com produto, design e engenharia.",
     "LOCATION": "Joinville, Santa Catarina, Brasil",
     "STATUS": "Disponível para desafios de alto impacto, liderança técnica e times orientados a qualidade.",
@@ -29,7 +29,6 @@
     "HIGHLIGHTS": {
       "KICKER": "Valor que entrego",
       "TITLE": "Foco em produto, arquitetura e execução com consistência.",
-      "SUBTITLE": "Seu perfil já tinha boa base técnica. Reestruturei a apresentação para destacar senioridade, impacto e repertório técnico de forma mais premium.",
       "ITEMS": [
         {
           "TITLE": "Arquitetura frontend escalável",
@@ -47,7 +46,7 @@
     },
     "SKILLS": {
       "KICKER": "Stack principal",
-      "TITLE": "Tecnologias e frentes onde você mais gera valor.",
+      "TITLE": "Tecnologias e frentes.",
       "GROUPS": [
         {
           "TITLE": "Frontend Core",
@@ -69,7 +68,6 @@
     },
     "FEATURED": {
       "KICKER": "Destaques",
-      "TITLE": "Sinais claros de senioridade para quem visita seu perfil.",
       "ITEMS": [
         {
           "TITLE": "Liderança técnica",
@@ -107,14 +105,12 @@
       ]
     },
     "GALLERY": {
-      "KICKER": "Identidade",
-      "TITLE": "Uma página técnica que também mostra presença e personalidade.",
-      "SUBTITLE": "Mantive um espaço visual mais pessoal, mas agora ele funciona como apoio à marca profissional em vez de competir com ela."
+      "KICKER": "Identidade"
     },
     "PLAYGROUND": {
       "KICKER": "Angular playground",
       "TITLE": "Demonstração de integração com API externa.",
-      "SUBTITLE": "O bloco da NASA continua como showcase técnico, agora posicionado como experimento de frontend e não como protagonista do perfil."
+      "SUBTITLE": "Consumo de NASA API."
     }
   },
   "EXPERIENCE_PAGE": {
@@ -250,7 +246,7 @@
   "CONTACT_PAGE": {
     "KICKER": "Contato",
     "TITLE": "Vamos conversar sobre produto, arquitetura ou novos desafios.",
-    "SUBTITLE": "A página foi redesenhada para vender melhor o seu perfil. Agora o CTA final também precisa ser forte, direto e profissional.",
+    "SUBTITLE": "Entre em contato.",
     "WHATSAPP": "WhatsApp",
     "LINKEDIN": "LinkedIn",
     "INSTAGRAM": "Instagram",
