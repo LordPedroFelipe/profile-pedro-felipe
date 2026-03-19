@@ -1,24 +1,49 @@
-.container {
-    max-width: 800px;
-    margin: 20px auto;
+﻿:host {
+  display: grid;
+  gap: 24px;
 }
 
-.card {
-    padding: 16px;
-    margin-bottom: 24px;
-    background-color: #F3F4F6;
+.page-hero {
+  background: linear-gradient(180deg, rgba(10, 21, 40, 0.94), rgba(7, 15, 28, 0.84));
 }
 
-.full-width {
-    width: 100%;
-    margin-bottom: 16px;
+.language-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  gap: 18px;
+}
+
+.language-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 220px;
+}
+
+.language-top {
+  display: grid;
+  gap: 12px;
+}
+
+.featured {
+  background: linear-gradient(180deg, rgba(8, 17, 32, 0.92), rgba(13, 27, 49, 0.92));
+}
+
+.certificate-frame {
+  padding: 14px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.14);
 }
 
 .idiomas-image {
-    vertical-align: middle;
-    margin-right: 8px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 900px) {
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
 }

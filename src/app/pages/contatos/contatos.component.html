@@ -1,48 +1,33 @@
-<mat-toolbar color="primary">
-  <span>{{ 'CONTACTS.TITLE' | translate }}</span>
-</mat-toolbar>
+﻿<section class="section-shell observed-card page-hero">
+  <span class="section-kicker">{{ 'CONTACT_PAGE.KICKER' | translate }}</span>
+  <h1 class="section-title">{{ 'CONTACT_PAGE.TITLE' | translate }}</h1>
+  <p class="section-subtitle">{{ 'CONTACT_PAGE.SUBTITLE' | translate }}</p>
+</section>
 
-<div class="container">
-  <mat-card class="card observed-card">
-    <mat-card-title>{{ 'CONTACTS.SUB_TITLE' | translate }}</mat-card-title>
-    <mat-card-content>
-      <p>
-        <mat-icon>phone</mat-icon>
-        <a href="https://wa.me/5547997716565" target="_blank" rel="noopener">
-        +55 47 99771 6565
-        </a>
-      </p>
-      <p>
-        <img src="assets/img/linkedin.png" alt="Imagem do linkedin" class="imagem-carrossel"/>
-        <a href="https://www.linkedin.com/in/pedrofelipeti" target="_blank" rel="noopener">
-        Linkedin
-        </a>
-      </p>
-      <p>
-        <img src="assets/img/instagram.jpg" alt="Imagem do instagram" class="imagem-carrossel"/>
-        <a href="https://www.instagram.com/pedrofelipedev" target="_blank" rel="noopener">
-        Instagram
-        </a>
-      </p>
-      <p>
-        <img src="assets/img/git.png" alt="Imagem do github" class="imagem-carrossel"/>
-        <a href="https://github.com/LordPedroFelipe" target="_blank" rel="noopener">
-        Github
-        </a>
-      </p>
-      <p>
-        <img src="assets/img/email.png" alt="Ícone de e-mail" class="imagem-carrossel" />
-        <a href="mailto:pf.souza15@gmail.com" target="_blank" rel="noopener">
-          pf.souza15@gmail.com
-        </a>
-      </p>
-      <app-download-cv></app-download-cv>
-
-      <div class="logo-container">
-        <img src="assets/img/pf-logo-dev.png" alt="PF Logo" class="logo" />
+<section class="contact-layout">
+  <article class="section-shell observed-card contact-card" *ngFor="let contact of contacts">
+    <a [href]="contact.href" target="_blank" rel="noopener" class="contact-link">
+      <div class="contact-icon">
+        <mat-icon *ngIf="isMaterialIcon(contact.icon)">{{ contact.icon }}</mat-icon>
+        <img *ngIf="!isMaterialIcon(contact.icon)" [src]="contact.icon" [alt]="contact.label | translate" loading="lazy" />
       </div>
+      <div>
+        <p class="contact-label">{{ contact.label | translate }}</p>
+        <h2>{{ contact.value }}</h2>
+      </div>
+      <mat-icon class="contact-arrow">north_east</mat-icon>
+    </a>
+  </article>
+</section>
 
-    </mat-card-content>
-  </mat-card>
-</div>
-  
+<section class="section-shell observed-card availability-card">
+  <div>
+    <span class="section-kicker">{{ 'CONTACT_PAGE.AVAILABILITY_TITLE' | translate }}</span>
+    <h2 class="section-title small">{{ 'CONTACT_PAGE.AVAILABILITY_TEXT' | translate }}</h2>
+  </div>
+
+  <div class="availability-actions">
+    <a class="primary-button" href="https://www.linkedin.com/in/pedrofelipeti" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="secondary-button" href="mailto:pf.souza15@gmail.com">E-mail</a>
+  </div>
+</section>

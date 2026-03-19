@@ -1,26 +1,49 @@
-.container {
-    max-width: 800px;
-    margin: 20px auto;
+﻿:host {
+  display: grid;
+  gap: 24px;
 }
 
-.card {
-    padding: 16px;
-    margin-bottom: 24px;
-    background-color: #F3F4F6;
+.page-hero {
+  background: linear-gradient(180deg, rgba(10, 21, 40, 0.94), rgba(7, 15, 28, 0.84));
 }
 
-.full-width {
-    width: 100%;
-    margin-bottom: 16px;
+.studies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.observed-card {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-  
-    &.animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.study-card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.study-type {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.study-card h2 {
+  font-size: 1.24rem;
+}
+
+.study-institution {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .studies-grid {
+    grid-template-columns: 1fr;
+  }
 }

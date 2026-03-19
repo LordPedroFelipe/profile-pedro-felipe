@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+﻿import { AfterViewInit, Component } from '@angular/core';
 import { AnimationObserverService } from 'src/app/services/animation-observer.service';
 
 @Component({
@@ -10,6 +10,6 @@ export class IdiomasComponent implements AfterViewInit {
   constructor(private animationService: AnimationObserverService) {}
 
   ngAfterViewInit(): void {
-    setTimeout(() => this.animationService.observarAnimacaoCards(), 0);
+    setTimeout(() => this.animationService.observarAnimacaoCards(0.15), 80);
   }
 }

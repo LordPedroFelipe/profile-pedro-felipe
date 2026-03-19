@@ -1,24 +1,32 @@
-<mat-toolbar color="primary">
-  <span>{{ 'EXPERIENCE_TITLE' | translate }}</span>
-</mat-toolbar>
+﻿<section class="section-shell observed-card page-hero">
+  <span class="section-kicker">{{ 'EXPERIENCE_PAGE.KICKER' | translate }}</span>
+  <h1 class="section-title">{{ 'EXPERIENCE_PAGE.TITLE' | translate }}</h1>
+  <p class="section-subtitle">{{ 'EXPERIENCE_PAGE.SUBTITLE' | translate }}</p>
+</section>
 
-<div id="experience-section">
-  <div class="wrapper" *ngFor="let job of experiences; let jobIndex = index">
-    <div class="foto-container" *ngIf="jobIndex % 2 === 0">
-      <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
+<section class="timeline observed-stagger">
+  <article class="timeline-item observed-card" *ngFor="let job of experiences; let index = index">
+    <div class="timeline-marker">
+      <span>{{ index + 1 }}</span>
     </div>
 
-    <mat-card class="card observed-card">
-      <mat-card-title>{{ job.TITLE }}</mat-card-title>
-      <mat-card-title>{{ job.DATE }}</mat-card-title>
-      <mat-card-content>
-        <p>{{ job.COMPANY }}</p>
-        <p *ngFor="let desc of job.DESCRIPTION">{{ desc }}</p>
-      </mat-card-content>
-    </mat-card>
+    <div class="timeline-content section-shell">
+      <div class="timeline-top">
+        <div class="timeline-brand">
+          <div class="brand-logo">
+            <img [src]="'assets/img/' + job.LOGO" [alt]="job.COMPANY" loading="lazy" />
+          </div>
+          <div>
+            <p class="timeline-date">{{ job.DATE }}</p>
+            <h2>{{ job.TITLE }}</h2>
+            <p class="timeline-company">{{ job.COMPANY }}</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="foto-container-direita" *ngIf="jobIndex % 2 !== 0">
-      <img [src]="'assets/img/' + job.COMPANY.split(': ')[1].split(' ')[0] + '.PNG'" alt="Company Logo" />
+      <ul class="timeline-points">
+        <li *ngFor="let item of job.DESCRIPTION">{{ item }}</li>
+      </ul>
     </div>
-  </div>
-</div>
+  </article>
+</section>

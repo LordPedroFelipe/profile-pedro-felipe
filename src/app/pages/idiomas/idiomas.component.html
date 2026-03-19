@@ -1,16 +1,27 @@
-<mat-toolbar color="primary">
-  <span>{{ 'LANGUAGES.TITLE' | translate }}</span>
-</mat-toolbar>
+﻿<section class="section-shell observed-card page-hero">
+  <span class="section-kicker">{{ 'LANGUAGES_PAGE.KICKER' | translate }}</span>
+  <h1 class="section-title">{{ 'LANGUAGES_PAGE.TITLE' | translate }}</h1>
+  <p class="section-subtitle">{{ 'LANGUAGES_PAGE.SUBTITLE' | translate }}</p>
+</section>
 
-<div class="container">
-  <mat-card class="card">
-    <mat-card-title>{{ 'LANGUAGES.CARD_TITLE' | translate }}</mat-card-title>
-    <mat-card-content>
-      <p> {{ 'LANGUAGES.PORTUGUESE' | translate }} </p>
-      <p> {{ 'LANGUAGES.ENGLISH' | translate }} </p>
+<section class="language-grid">
+  <article class="section-shell observed-card language-card">
+    <div class="language-top">
+      <span class="metric-chip">{{ 'LANGUAGES_PAGE.PORTUGUESE' | translate }}</span>
+      <h2>{{ 'LANGUAGES_PAGE.PORTUGUESE_LEVEL' | translate }}</h2>
+      <p>Comunicação nativa, escrita profissional e adaptação de tom para contextos técnicos e executivos.</p>
+    </div>
+  </article>
 
-      <img src="assets/img/english-certificate.jpeg" alt="Idiomas" class="idiomas-image">
-    </mat-card-content>
-  </mat-card>
-</div>
-  
+  <article class="section-shell observed-card language-card featured">
+    <div class="language-top">
+      <span class="metric-chip">{{ 'LANGUAGES_PAGE.ENGLISH' | translate }}</span>
+      <h2>{{ 'LANGUAGES_PAGE.ENGLISH_LEVEL' | translate }}</h2>
+      <p>{{ 'LANGUAGES_PAGE.CERTIFICATE_TEXT' | translate }}</p>
+    </div>
+
+    <div class="certificate-frame">
+      <img src="assets/img/english-certificate.jpeg" alt="English Certificate" class="idiomas-image" loading="lazy">
+    </div>
+  </article>
+</section>

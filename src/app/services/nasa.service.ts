@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+﻿import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Apod } from '../models/apod.model';
@@ -14,10 +14,9 @@ export class NasaService {
 
   getApodByDate(date?: string): Observable<Apod> {
     let params = new HttpParams().set('api_key', this.apiKey);
-  
+
     if (date) {
-      const formattedDate = date.toISOString().split('T')[0];
-      params = params.set('date', formattedDate);
+      params = params.set('date', date);
     }
 
     return this.http.get<Apod>(this.apiUrl, { params });

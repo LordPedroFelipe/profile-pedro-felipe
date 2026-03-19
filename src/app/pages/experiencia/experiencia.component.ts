@@ -1,7 +1,15 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+﻿import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { AnimationObserverService } from 'src/app/services/animation-observer.service';
+
+interface ExperienceItem {
+  TITLE: string;
+  DATE: string;
+  COMPANY: string;
+  LOGO: string;
+  DESCRIPTION: string[];
+}
 
 @Component({
   selector: 'app-experiencia',
@@ -9,8 +17,9 @@ import { AnimationObserverService } from 'src/app/services/animation-observer.se
   styleUrls: ['./experiencia.component.scss']
 })
 export class ExperienciaComponent implements AfterViewInit, OnDestroy {
-  experiences: any[] = [];
-  private langChangeSub!: Subscription;
+  experiences: ExperienceItem[] = [];
+
+  private langChangeSub?: Subscription;
 
   constructor(
     private animationService: AnimationObserverService,
@@ -18,26 +27,21 @@ export class ExperienciaComponent implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
-    this.carregarExperiencias();
+    this.loadExperiences();
 
-    // Escuta troca de idioma
-    this.langChangeSub = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.carregarExperiencias();
-    });
-  }
-
-  carregarExperiencias(): void {
-    this.translate.get('EXPERIENCE').subscribe((res: any[]) => {
-      this.experiences = res;
-
-      // Aguarda renderização dos cards
-      setTimeout(() => this.animationService.observarAnimacaoCards(), 100);
+    this.langChangeSub = this.translate.onLangChange.subscribe((_event: LangChangeEvent) => {
+      this.loadExperiences();
     });
   }
 
   ngOnDestroy(): void {
-    if (this.langChangeSub) {
-      this.langChangeSub.unsubscribe();
-    }
+    this.langChangeSub?.unsubscribe();
+  }
+
+  private loadExperiences(): void {
+    this.translate.get('EXPERIENCE.JOBS').subscribe((jobs: ExperienceItem[]) => {
+      this.experiences = jobs ?? [];
+      setTimeout(() => this.animationService.observarAnimacaoCards(0.15), 80);
+    });
   }
 }

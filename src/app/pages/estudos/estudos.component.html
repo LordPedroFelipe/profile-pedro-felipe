@@ -1,13 +1,14 @@
-<mat-toolbar color="primary">
-  <span>{{ 'STUDIES_TITLE' | translate }}</span>
-</mat-toolbar>
+﻿<section class="section-shell observed-card page-hero">
+  <span class="section-kicker">{{ 'STUDIES_PAGE.KICKER' | translate }}</span>
+  <h1 class="section-title">{{ 'STUDIES_PAGE.TITLE' | translate }}</h1>
+  <p class="section-subtitle">{{ 'STUDIES_PAGE.SUBTITLE' | translate }}</p>
+</section>
 
-<div *ngFor="let study of 'STUDIES' | translate" class="container">
-  <mat-card class="card observed-card">
-    <mat-card-title>{{ study.INSTITUTION }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ study.DATE }}</p>
-      <p>{{ study.COURSE }}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
+<section class="studies-grid observed-stagger">
+  <article class="section-shell observed-card study-card" *ngFor="let study of studies">
+    <span class="study-type">{{ study.TYPE }}</span>
+    <h2>{{ study.COURSE }}</h2>
+    <p class="study-institution">{{ study.INSTITUTION }}</p>
+    <p>{{ study.DATE }}</p>
+  </article>
+</section>
