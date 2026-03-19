@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,22 +7,25 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pedro Felipe';
+  readonly availableLangs = ['pt', 'en'];
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'pt']);
+    this.translate.addLangs(this.availableLangs);
 
-    // Detecta idioma salvo ou navegador
     const savedLang = localStorage.getItem('lang');
-    const browserLang = translate.getBrowserLang();
+    const browserLang = this.translate.getBrowserLang();
     const defaultLang = savedLang || (browserLang === 'pt' ? 'pt' : 'en');
 
-    translate.setDefaultLang('en');
-    translate.use(defaultLang);
+    this.translate.setDefaultLang('pt');
+    this.translate.use(defaultLang);
   }
 
-  trocarIdioma(idioma: string) {
+  trocarIdioma(idioma: string): void {
     this.translate.use(idioma);
-    localStorage.setItem('lang', idioma); // salva preferência
+    localStorage.setItem('lang', idioma);
+  }
+
+  isActiveLang(idioma: string): boolean {
+    return this.translate.currentLang === idioma;
   }
 }

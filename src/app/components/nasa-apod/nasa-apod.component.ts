@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
-import { BehaviorSubject, catchError, EMPTY, Observable, switchMap, tap } from 'rxjs';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { BehaviorSubject, EMPTY, Observable, catchError, finalize, switchMap, tap } from 'rxjs';
 import { Apod } from 'src/app/models/apod.model';
 import { NasaService } from 'src/app/services/nasa.service';
-import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
   selector: 'app-nasa-apod',
@@ -12,97 +11,80 @@ import { TranslationService } from 'src/app/services/translation.service';
   styleUrls: ['./nasa-apod.component.scss']
 })
 export class NasaApodComponent implements OnInit {
-  dateControl = new FormControl(); // datepicker control
+  readonly dateControl = new FormControl<Date | null>(new Date());
 
-  apod$ = new BehaviorSubject<Apod | null>(null);
-  loading$ = new BehaviorSubject<boolean>(false);
-  error$ = new BehaviorSubject<string | null>(null);
-
-  imageLoading$ = new BehaviorSubject<boolean>(true);
-  imageError$ = new BehaviorSubject<boolean>(false);
-
+  readonly apod$ = new BehaviorSubject<Apod | null>(null);
+  readonly loading$ = new BehaviorSubject<boolean>(false);
+  readonly error$ = new BehaviorSubject<string | null>(null);
+  readonly imageLoading$ = new BehaviorSubject<boolean>(true);
+  readonly imageError$ = new BehaviorSubject<boolean>(false);
+  readonly safeVideoUrl$ = new BehaviorSubject<SafeResourceUrl | null>(null);
 
   constructor(
     private nasaService: NasaService,
-    private translateService: TranslateService,
-    private translationService: TranslationService
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
-    this.dateControl.setValue(new Date());
-    this.buscarImagem(); // Carrega a imagem do dia ao iniciar
-  
+    this.buscarImagem();
+
     this.dateControl.valueChanges
       .pipe(
-        tap(() => {
-          this.loading$.next(true);
-          this.error$.next(null);
-        }),
-        switchMap(date => {
-          if (!date) return EMPTY;
-          const formattedDate = this.formatDate(date);
-          return this.carregarImagem(formattedDate);
+        switchMap((date) => {
+          if (!date) {
+            return EMPTY;
+          }
+
+          return this.carregarImagem(this.formatDate(date));
         })
       )
       .subscribe();
   }
-  
+
   buscarImagem(): void {
+    const currentDate = this.dateControl.value;
+    this.carregarImagem(currentDate ? this.formatDate(currentDate) : undefined).subscribe();
+  }
+
+  carregarImagem(data?: string): Observable<Apod> {
     this.loading$.next(true);
     this.error$.next(null);
-    this.carregarImagem().subscribe(); // busca imagem do dia
-  }
-  
-  carregarImagem(data?: string): Observable<void> {
     this.apod$.next(null);
     this.imageLoading$.next(true);
     this.imageError$.next(false);
-  
+    this.safeVideoUrl$.next(null);
+
     return this.nasaService.getApodByDate(data).pipe(
-      switchMap(async apod => {
-        // console.log(apod);
-        const lang = this.translateService.currentLang || this.translateService.getDefaultLang();
-  
-        /*if (lang === 'pt') {
-          try {
-            const traducao = await this.translationService.traduzirApod(apod.title, apod.explanation);
-            apod.title = traducao.title;
-            apod.explanation = traducao.explanation;
-          } catch {
-            this.error$.next('Erro ao traduzir o conteúdo.');
-          }
-        }*/
-  
+      tap((apod) => {
         this.apod$.next(apod);
-        this.loading$.next(false);
+
+        if (apod.media_type === 'video') {
+          this.safeVideoUrl$.next(this.sanitizer.bypassSecurityTrustResourceUrl(apod.url));
+        }
 
         if (apod.media_type === 'other') {
           this.imageLoading$.next(false);
         }
-        return;
       }),
-      catchError(err => {
-        const mensagemErro = err.msg
-          ? err.msg
-          : 'Não encontramos imagem para a data | No data available for date';
-        this.error$.next(mensagemErro);
-        this.loading$.next(false);
+      finalize(() => this.loading$.next(false)),
+      catchError(() => {
+        this.error$.next('NASA_COMPONENT.IMG_ERROR');
         this.imageLoading$.next(false);
         return EMPTY;
       })
     );
-  }  
-
-  formatDate(date: Date): string {
-    return date.toISOString().split('T')[0]; // formato: YYYY-MM-DD
   }
 
-  onImageLoad(): void {
+  formatDate(date: Date): string {
+    return date.toISOString().split('T')[0];
+  }
+
+  onMediaLoad(): void {
     this.imageLoading$.next(false);
     this.imageError$.next(false);
   }
-  
-  onImageError(): void {
+
+  onMediaError(): void {
     this.imageLoading$.next(false);
     this.imageError$.next(true);
   }

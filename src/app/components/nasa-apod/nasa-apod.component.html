@@ -1,81 +1,70 @@
-<mat-toolbar color="primary">
-  <span>{{ 'NASA_COMPONENT.TITLE' | translate }}</span>
-</mat-toolbar>
+﻿<div class="nasa-shell">
+  <div class="nasa-top">
+    <div>
+      <h3>{{ 'NASA_COMPONENT.TITLE' | translate }}</h3>
+      <p>{{ 'NASA_COMPONENT.SUB_TITLE' | translate }}</p>
+    </div>
 
-<h3>{{ 'NASA_COMPONENT.SUB_TITLE' | translate }}</h3>
-
-<div class="filter-container">
-  <mat-form-field appearance="outline">
-    <mat-label>{{ 'NASA_COMPONENT.DATE' | translate }}</mat-label>
-    <input matInput [matDatepicker]="picker" [formControl]="dateControl">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-</div>
-
-<!--mat-spinner *ngIf="loading$ | async" diameter="48"></mat-spinner-->
-<mat-card *ngIf="(apod$ | async) as apod; else loadingCard">
-  <mat-card-header>
-    <mat-card-title>{{ apod.title }}</mat-card-title>
-    <mat-card-subtitle>{{ apod.date }}</mat-card-subtitle>
-  </mat-card-header>
-
-  <!-- Enquanto a imagem carrega -->
-  <div class="image-loader" *ngIf="(imageLoading$ | async)">
-    <mat-spinner diameter="32"></mat-spinner>
-    <p>
-      {{ 'NASA_COMPONENT.CARREGANDO' | translate }}
-    </p>
+    <div class="filter-container">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'NASA_COMPONENT.DATE' | translate }}</mat-label>
+        <input matInput [matDatepicker]="picker" [formControl]="dateControl">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
   </div>
 
-  <!-- Imagem carregada com sucesso -->
-  <img
-    *ngIf="apod.media_type === 'image' && !(imageError$ | async)"
-    [src]="apod.url"
-    [alt]="apod.title"
-    (load)="onImageLoad()"
-    (error)="onImageError()" />
+  <div class="nasa-card" *ngIf="(apod$ | async) as apod">
+    <div class="nasa-head">
+      <div>
+        <p class="nasa-date">{{ apod.date }}</p>
+        <h4>{{ apod.title }}</h4>
+      </div>
+    </div>
 
-  <!-- Vídeo embutido (YouTube/Vimeo) -->
-  <iframe
-    *ngIf="apod.media_type === 'video'"
-    [src]="apod.url"
-    width="100%"
-    height="400"
-    frameborder="0"
-    allowfullscreen
-    (load)="onImageLoad()"
-    (error)="onImageError()">
-  </iframe>
+    <div class="media-frame">
+      <div class="image-loader" *ngIf="imageLoading$ | async">
+        <mat-spinner diameter="34"></mat-spinner>
+        <p>{{ 'NASA_COMPONENT.CARREGANDO' | translate }}</p>
+      </div>
 
-  <!-- Conteúdo não suportado -->
-  <div *ngIf="apod.media_type === 'other'" class="not-supported">
-    <p>
-      {{ 'NASA_COMPONENT.MIDIA_NAO_SUPORTADA' | translate }}
-    </p>
-    <a *ngIf="apod.url" [href]="apod.url" target="_blank" rel="noopener">
-      {{ 'NASA_COMPONENT.VER_CONTEUDO_EXTERNO' | translate }}
-    </a>
+      <img
+        *ngIf="apod.media_type === 'image' && !(imageError$ | async)"
+        [src]="apod.url"
+        [alt]="apod.title"
+        (load)="onMediaLoad()"
+        (error)="onMediaError()"
+      />
+
+      <iframe
+        *ngIf="apod.media_type === 'video'"
+        [src]="safeVideoUrl$ | async"
+        title="NASA APOD video"
+        loading="lazy"
+        allowfullscreen
+        (load)="onMediaLoad()"
+      ></iframe>
+
+      <div *ngIf="apod.media_type === 'other'" class="not-supported">
+        <p>{{ 'NASA_COMPONENT.MIDIA_NAO_SUPORTADA' | translate }}</p>
+        <a [href]="apod.url" target="_blank" rel="noopener" class="ghost-button">
+          {{ 'NASA_COMPONENT.VER_CONTEUDO_EXTERNO' | translate }}
+        </a>
+      </div>
+
+      <div *ngIf="imageError$ | async" class="error">
+        {{ 'NASA_COMPONENT.IMG_ERROR' | translate }}
+      </div>
+    </div>
+
+    <div class="nasa-content">
+      <p>{{ apod.explanation }}</p>
+      <p *ngIf="apod.copyright" class="copyright">© {{ apod.copyright }}</p>
+    </div>
   </div>
 
-  <!-- Caso a imagem falhe ao carregar -->
-  <div *ngIf="imageError$ | async" class="error">
-    {{ 'NASA_COMPONENT.IMG_ERROR' | translate }}
+  <div class="error" *ngIf="error$ | async as errorMsg">
+    {{ errorMsg | translate }}
   </div>
-
-  <mat-card-content>
-    <p>{{ apod.explanation }}</p>
-    <p *ngIf="apod.copyright">© {{ apod.copyright }}</p>
-  </mat-card-content>
-</mat-card>
-
-<ng-template #loadingCard>
-  <div class="image-loader" *ngIf="imageLoading$ | async">
-    <mat-spinner diameter="48"></mat-spinner>
-    <p>{{ 'NASA_COMPONENT.CARREGANDO' | translate }}</p>
-  </div>
-</ng-template>
-
-<div class="error" *ngIf="error$ | async as errorMsg">
-  {{ errorMsg }}
 </div>

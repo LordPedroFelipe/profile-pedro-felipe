@@ -1,12 +1,32 @@
-<div class="carrossel-container">
-    <button mat-icon-button (click)="mostrarAnterior()">
-        <mat-icon>chevron_left</mat-icon>
-    </button>
-  
-    <img [src]="imagens[imagemAtual]" alt="Imagem do carrossel" class="imagem-carrossel" />
-  
-    <button mat-icon-button (click)="mostrarProxima()">
-        <mat-icon>chevron_right</mat-icon>
-    </button>
+﻿<div class="gallery-shell">
+  <button type="button" class="gallery-nav" (click)="mostrarAnterior()" aria-label="Imagem anterior">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <div class="gallery-stage">
+    <img
+      [src]="imagens[imagemAtual].src"
+      [alt]="imagens[imagemAtual].title"
+      class="imagem-carrossel"
+      loading="lazy"
+    />
+    <div class="gallery-caption">
+      <p>{{ imagens[imagemAtual].title }}</p>
+      <span>{{ imagemAtual + 1 }} / {{ imagens.length }}</span>
+    </div>
+  </div>
+
+  <button type="button" class="gallery-nav" (click)="mostrarProxima()" aria-label="Próxima imagem">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
 </div>
-  
+
+<div class="gallery-dots">
+  <button
+    type="button"
+    *ngFor="let image of imagens; let index = index"
+    [class.active]="index === imagemAtual"
+    (click)="selecionarImagem(index)"
+    [attr.aria-label]="image.title"
+  ></button>
+</div>

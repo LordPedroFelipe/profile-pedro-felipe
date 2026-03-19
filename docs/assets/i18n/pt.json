@@ -1,176 +1,278 @@
-{
-    "TITLE": "Pedro Felipe - Desenvolvedor Frontend Sênior",
-    "HELLO": "Olá,",
-    "INTRO": "Meu nome é Pedro Felipe, sou do Brasil e atuo como Desenvolvedor de Software Sênior, com 12 anos de experiência focado em desenvolvimento frontend e backend.",
-    "TECH_DESC": "Sou especialista em tecnologias como Angular (15+), TypeScript e Node.js, com sólida experiência na criação de soluções escaláveis, de alto desempenho e alta qualidade. Também tenho habilidades em arquitetura de sistemas e liderança técnica, sempre buscando agregar valor às equipes em que atuo.",
+﻿{
+  "GLOBAL": {
+    "LANG_LABEL": "Idioma"
+  },
+  "NAV": {
+    "TAGLINE": "Angular, arquitetura frontend, liderança técnica e entrega de produto com visão de negócio."
+  },
+  "MENU": {
+    "PROFILE": "Perfil",
+    "EXPERIENCE": "Experiência",
+    "STUDIES": "Formação",
+    "LANGUAGES": "Idiomas",
+    "CONTACTS": "Contato"
+  },
+  "PROFILE": {
+    "KICKER": "Senior Frontend Engineer",
+    "TITLE": "Pedro Felipe constrói experiências frontend robustas, escaláveis e com padrão de produto maduro.",
+    "SUBTITLE": "Mais de 12 anos entregando aplicações web, arquitetura evolutiva, micro frontends, excelência em Angular e colaboração forte com produto, design e engenharia.",
     "LOCATION": "Joinville, Santa Catarina, Brasil",
-  
-    "SUMMARY": "Resumo",
-    "SUMMARY_1": "Analista de Sistemas experiente com forte atuação no desenvolvimento de sistemas WEB robustos, utilizando banco de dados Caché e domínio em HTML, Javascript, CSS e JQuery.",
-    "SUMMARY_2": "Ampla experiência na área da Saúde, com foco em análise e desenvolvimento de sistemas usando banco Caché, programação orientada a objetos e metodologias analíticas avançadas.",
-    "SUMMARY_3": "Histórico comprovado de entrega bem-sucedida de diversos projetos, utilizando tecnologias como HTML5, CSS3, Bootstrap, JavaScript, JQuery, Angular, NodeJS, PostgreSQL, MongoDB, entre outras.",
-    "SUMMARY_4": "Atualmente faço parte de um time ágil, contribuindo ativamente em diversos projetos com foco em análise e desenvolvimento frontend, com domínio em TypeScript, Angular e Git.",
-  
-    "SKILLS": "Habilidades",
-    "PUBLICATIONS": "Publicações",
-    "PUBLICATION_1": "Guia de integração do Microsoft MSAL com Angular 15 e MicroFrontend Nx.Dev",
-    "PUBLICATION_2": "Tutorial para criação de projeto Angular com Nx.dev (Module Federation)",
-    "PUBLICATION_3": "Como Criar uma Biblioteca de Componentes Angular Usando Nx.dev e Module Federation",
-    "PUBLICATION_SUB_1": "Autenticação com Angular e MicroFrontend Nx.Dev",
-    "PUBLICATION_SUB_2": "Criando um Projeto Angular com Nx.dev",
-    "PUBLICATION_SUB_3": "Biblioteca de Componentes Angular",
-
-    "PHOTOS": "Fotos",
-    "NASA": "Imagem do Dia (NASA APOD)",
-    "EXPERIENCE_TITLE": "Com 12 anos de experiência",
-    "EXPERIENCE": [
+    "STATUS": "Disponível para desafios de alto impacto, liderança técnica e times orientados a qualidade.",
+    "CTA_PRIMARY": "Falar comigo",
+    "CTA_SECONDARY": "Baixar currículo",
+    "METRICS": [
+      { "VALUE": "12+", "LABEL": "anos construindo software" },
+      { "VALUE": "Angular", "LABEL": "stack principal em produtos grandes" },
+      { "VALUE": "Frontend", "LABEL": "arquitetura, performance e DX" },
+      { "VALUE": "Senior", "LABEL": "liderança técnica e entrega" }
+    ],
+    "HIGHLIGHTS": {
+      "KICKER": "Valor que entrego",
+      "TITLE": "Foco em produto, arquitetura e execução com consistência.",
+      "SUBTITLE": "Seu perfil já tinha boa base técnica. Reestruturei a apresentação para destacar senioridade, impacto e repertório técnico de forma mais premium.",
+      "ITEMS": [
+        {
+          "TITLE": "Arquitetura frontend escalável",
+          "TEXT": "Experiência com Angular, componentização, design systems, code organization, micro frontends e decisões que sustentam crescimento do produto."
+        },
+        {
+          "TITLE": "Entrega com visão de negócio",
+          "TEXT": "Capacidade de traduzir necessidades complexas em soluções estáveis, com boa experiência de usuário, previsibilidade técnica e foco em resultado."
+        },
+        {
+          "TITLE": "Qualidade e colaboração",
+          "TEXT": "Atuação forte em code review, boas práticas, padronização, integração entre times e evolução contínua do ecossistema frontend."
+        }
+      ]
+    },
+    "SKILLS": {
+      "KICKER": "Stack principal",
+      "TITLE": "Tecnologias e frentes onde você mais gera valor.",
+      "GROUPS": [
+        {
+          "TITLE": "Frontend Core",
+          "ITEMS": ["Angular 7+", "TypeScript", "JavaScript", "HTML5", "SCSS/CSS3", "RxJS", "Angular Material"]
+        },
+        {
+          "TITLE": "Arquitetura",
+          "ITEMS": ["Micro Frontends", "Module Federation", "Nx", "APIs e WebServices", "Design Systems", "Performance"]
+        },
+        {
+          "TITLE": "Qualidade e entrega",
+          "ITEMS": ["Testes unitários", "GitHub/GitLab", "CI/CD", "Responsive Development", "Code Review", "SCRUM"]
+        },
+        {
+          "TITLE": "Ecossistema complementar",
+          "ITEMS": ["Node.js", "PostgreSQL", "MongoDB", "Bootstrap", "PrimeNG", "React"]
+        }
+      ]
+    },
+    "FEATURED": {
+      "KICKER": "Destaques",
+      "TITLE": "Sinais claros de senioridade para quem visita seu perfil.",
+      "ITEMS": [
+        {
+          "TITLE": "Liderança técnica",
+          "TEXT": "Participação em arquitetura de novos projetos, padronização e evolução da experiência de desenvolvimento."
+        },
+        {
+          "TITLE": "Produtos de escala",
+          "TEXT": "Atuação em contextos corporativos com demandas reais de performance, manutenção, colaboração e governança."
+        },
+        {
+          "TITLE": "Visibilidade técnica",
+          "TEXT": "Publicações técnicas e repertório prático em Angular, Nx e Micro Frontends reforçando autoridade no tema."
+        }
+      ]
+    },
+    "PUBLICATIONS": {
+      "KICKER": "Conteúdo técnico",
+      "TITLE": "Artigos e estudos publicados",
+      "ITEMS": [
+        {
+          "TITLE": "MSAL Authentication com Angular e MicroFrontend Nx.Dev",
+          "TEXT": "Integração entre autenticação, arquitetura modular e escalabilidade em aplicações frontend.",
+          "LINK": "https://medium.com/@pf.souza15/microsoft-msal-authentication-with-angular-and-microfrontend-nx-dev-5e7f492fd4dd"
+        },
+        {
+          "TITLE": "Criando um projeto Angular com Nx.dev",
+          "TEXT": "Base sólida para organização de monorepo, modularização e evolução de aplicações.",
+          "LINK": "https://medium.com/@pf.souza15/creating-an-angular-project-with-nx-dev-a1ad925ab5f5"
+        },
+        {
+          "TITLE": "Biblioteca de componentes Angular com Nx.dev e Module Federation",
+          "TEXT": "Estratégia para reutilização, governança visual e produtividade de times frontend.",
+          "LINK": "https://medium.com/@pf.souza15/como-criar-uma-biblioteca-de-componentes-angular-reutiliz%C3%A1vel-usando-nx-dev-e-module-federation-6ad7f6b4c672"
+        }
+      ]
+    },
+    "GALLERY": {
+      "KICKER": "Identidade",
+      "TITLE": "Uma página técnica que também mostra presença e personalidade.",
+      "SUBTITLE": "Mantive um espaço visual mais pessoal, mas agora ele funciona como apoio à marca profissional em vez de competir com ela."
+    },
+    "PLAYGROUND": {
+      "KICKER": "Angular playground",
+      "TITLE": "Demonstração de integração com API externa.",
+      "SUBTITLE": "O bloco da NASA continua como showcase técnico, agora posicionado como experimento de frontend e não como protagonista do perfil."
+    }
+  },
+  "EXPERIENCE_PAGE": {
+    "KICKER": "Carreira",
+    "TITLE": "Trajetória construída com consistência, evolução e repertório prático.",
+    "SUBTITLE": "Experiência em empresas com contextos diferentes, sempre com foco em frontend, arquitetura, colaboração e entrega sustentável."
+  },
+  "EXPERIENCE": {
+    "JOBS": [
       {
-        "TITLE": "Engenheiro de Software Frontend - Angular 9+, Typescript",
-        "DATE": "Data: 10/2022 - Atualmente",
-        "COMPANY": "Empresa: Via Varejo - Casas Bahia",
+        "TITLE": "Senior Frontend Tech Lead | Angular, React, TypeScript",
+        "DATE": "Jun 2025 - Atual",
+        "COMPANY": "Martinelli Tech",
+        "LOGO": "martinelli.png",
         "DESCRIPTION": [
-          "Descrição: Engenheiro de Software Frontend Sênior",
-          "Tecnologias utilizadas: Angular, Typescript, Git, SCRUM, entre outras...",
-          "Trabalho com Arquitetura de novos projetos, MicroFrontend com Module Federation e Nx.Dev",
-          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
-          "Foco em análise e desenvolvimento frontend.",
-          "Atuação na SQUAD da Plataforma de Seguros e Serviços."
+          "Tech Lead Frontend responsável por liderar o desenvolvimento de aplicações em Angular, React e TypeScript, definindo arquitetura, padrões e boas práticas.",
+          "Atuação focada em escalabilidade, performance, qualidade de código e evolução contínua dos produtos, com forte participação em decisões técnicas e liderança de equipe."
         ]
       },
       {
-        "TITLE": "Desenvolvedor Frontend Sênior",
-        "DATE": "Data: 08/2021 - 10/2022",
-        "COMPANY": "Empresa: OPAH TI",
+        "TITLE": "Senior Frontend Software Engineer",
+        "DATE": "Out 2022 - Jun 2025",
+        "COMPANY": "Via Varejo / Casas Bahia",
+        "LOGO": "Via.PNG",
         "DESCRIPTION": [
-          "Descrição: Analista Desenvolvedor Frontend",
-          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
-          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
-          "Foco em análise e desenvolvimento frontend."
+          "Atuação como engenheiro frontend sênior em iniciativas de alto impacto para a plataforma de seguros e serviços.",
+          "Participação em arquitetura de novos projetos com Angular, TypeScript, Module Federation e Nx.",
+          "Integração com time ágil, colaboração multidisciplinar e foco em escalabilidade de produto."
         ]
       },
       {
-        "TITLE": "Desenvolvedor Frontend Sênior",
-        "DATE": "Data: 10/2020 - 09/2021",
-        "COMPANY": "Empresa: Nexo AI",
+        "TITLE": "Senior Frontend Developer",
+        "DATE": "Ago 2021 - Out 2022",
+        "COMPANY": "OPAH TI",
+        "LOGO": "Opah.PNG",
         "DESCRIPTION": [
-          "Descrição: Analista Desenvolvedor Frontend",
-          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
-          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
-          "Foco em análise e desenvolvimento frontend."
+          "Desenvolvimento frontend com Angular e TypeScript em projetos corporativos variados.",
+          "Atuação com boa autonomia técnica, colaboração em equipe ágil e evolução contínua de interface e código."
         ]
       },
       {
-        "TITLE": "Desenvolvedor Frontend Sênior",
-        "DATE": "Data: 03/2020 - 01/2021",
-        "COMPANY": "Empresa: Becomex Lab",
+        "TITLE": "Senior Frontend Developer",
+        "DATE": "Out 2020 - Set 2021",
+        "COMPANY": "Nexo AI",
+        "LOGO": "Nexo.PNG",
         "DESCRIPTION": [
-          "Descrição: Analista Desenvolvedor Frontend",
-          "Tecnologias utilizadas: Angular, Typescript, Git, entre outras...",
-          "Integrante de um time ágil de desenvolvimento, atuando em diversos projetos.",
-          "Foco em análise e desenvolvimento frontend."
+          "Foco em análise e desenvolvimento frontend para soluções digitais com stack moderna.",
+          "Entrega de interfaces com preocupação em manutenção, usabilidade e ritmo sustentável de evolução."
         ]
       },
       {
-        "TITLE": "Desenvolvedor FullStack",
-        "DATE": "Data: 02/2014 - 03/2020",
-        "COMPANY": "Empresa: Micromed Sistemas Ltda",
+        "TITLE": "Senior Frontend Developer",
+        "DATE": "Mar 2020 - Jan 2021",
+        "COMPANY": "Becomex Lab",
+        "LOGO": "Becomex.PNG",
         "DESCRIPTION": [
-          "Descrição: Analista Desenvolvedor FullStack",
-          "Criação de diversos projetos com tecnologias como:",
-          "HTML5, CSS3, Bootstrap, JavaScript, Jquery, TypeScript, Angular, NodeJS, Postgresql, MongoDB entre outras."
+          "Participação em iniciativas frontend com Angular e TypeScript dentro de um contexto de negócio exigente.",
+          "Apoio à construção de soluções mais organizadas, previsíveis e com melhor experiência de desenvolvimento."
         ]
       },
       {
-        "TITLE": "Desenvolvedor Web",
-        "DATE": "Data: 03/2012 - 12/2013",
-        "COMPANY": "Empresa: Web Mais Sistemas",
+        "TITLE": "Full Stack Developer",
+        "DATE": "Fev 2014 - Mar 2020",
+        "COMPANY": "Micromed Sistemas",
+        "LOGO": "Micromed.PNG",
         "DESCRIPTION": [
-          "Descrição: Analista Desenvolvedor Web",
-          "Desenvolvimento de back-end e banco de dados com tecnologia Intersystems Cache.",
-          "Desenvolvimento com Javascript, HTML, CSS e componentização no Front-end.",
-          "Atuei na correção de chamados e melhorias no sistema ERP da empresa em diversos módulos, entendendo as necessidades do cliente e implementando da melhor forma no código-fonte."
+          "Criação de diversos projetos com HTML5, CSS3, JavaScript, TypeScript, Angular, Node.js, PostgreSQL e MongoDB.",
+          "Vivência forte em análise, desenvolvimento e sustentação de soluções para contextos mais robustos."
+        ]
+      },
+      {
+        "TITLE": "Web Developer",
+        "DATE": "Mar 2012 - Dez 2013",
+        "COMPANY": "Web Mais Sistemas",
+        "LOGO": "Web.PNG",
+        "DESCRIPTION": [
+          "Desenvolvimento back-end e banco de dados com Intersystems Caché.",
+          "Atuação em front-end com JavaScript, HTML, CSS e melhorias em módulos de ERP conforme necessidade do cliente."
         ]
       }
-    ],
-    "MENU": {
-        "PROFILE": "Perfil",
-        "EXPERIENCE": "Experiência",
-        "STUDIES": "Estudos",
-        "LANGUAGES": "Idiomas",
-        "CONTACTS": "Contatos"
-    },
-    
-  "STUDIES_TITLE": "Formação acadêmica concluída",
-  "STUDIES": [
-    {
-      "INSTITUTION": "Anhanguera Educacional",
-      "DATE": "Data: 01/2018 - 12/2019",
-      "COURSE": "Pós-graduação MBA em Gestão Estratégica de Negócios"
-    },
-    {
-      "INSTITUTION": "Anhanguera Educacional",
-      "DATE": "Data: 01/2014 - 12/2017",
-      "COURSE": "Tecnólogo em Análise e Desenvolvimento de Sistemas"
-    },
-    {
-      "INSTITUTION": "Senac Brasil",
-      "DATE": "Data: 01/2013 - 12/2013",
-      "COURSE": "Tecnólogo em Gestão da Tecnologia da Informação"
-    },
-    {
-      "INSTITUTION": "SATC",
-      "DATE": "Data: 01/2010 - 12/2011",
-      "COURSE": "Curso técnico em informática"
-    },
-    {
-      "INSTITUTION": "Udemy.com",
-      "DATE": "06/2015",
-      "COURSE": "Curso Completo do Desenvolvedor NodeJS e MongoDB"
-    },
-    {
-      "INSTITUTION": "Udemy.com",
-      "DATE": "04/2018",
-      "COURSE": "Curso completo de Desenvolvimento Web 2018 - Crie 6 projetos"
-    },
-    {
-      "INSTITUTION": "Udemy.com",
-      "DATE": "08/2019",
-      "COURSE": "Angular 9 Essencial"
-    }
-  ],
+    ]
+  },
+  "STUDIES_PAGE": {
+    "KICKER": "Formação",
+    "TITLE": "Base acadêmica e aprendizado contínuo.",
+    "SUBTITLE": "Formação formal, especialização e cursos que sustentam a evolução da carreira técnica."
+  },
+  "STUDIES": {
+    "ITEMS": [
+      {
+        "INSTITUTION": "Anhanguera Educacional",
+        "DATE": "2018 - 2019",
+        "COURSE": "MBA em Gestão Estratégica de Negócios",
+        "TYPE": "Pós-graduação"
+      },
+      {
+        "INSTITUTION": "Anhanguera Educacional",
+        "DATE": "2014 - 2017",
+        "COURSE": "Análise e Desenvolvimento de Sistemas",
+        "TYPE": "Graduação"
+      },
+      {
+        "INSTITUTION": "Senac Brasil",
+        "DATE": "2013",
+        "COURSE": "Gestão da Tecnologia da Informação",
+        "TYPE": "Tecnólogo"
+      },
+      {
+        "INSTITUTION": "SATC",
+        "DATE": "2010 - 2011",
+        "COURSE": "Curso Técnico em Informática",
+        "TYPE": "Curso técnico"
+      },
+      {
+        "INSTITUTION": "Udemy",
+        "DATE": "2015 - 2019",
+        "COURSE": "Node.js, MongoDB, Web Development e Angular",
+        "TYPE": "Aprendizado contínuo"
+      }
+    ]
+  },
+  "LANGUAGES_PAGE": {
+    "KICKER": "Comunicação",
+    "TITLE": "Idiomas e atuação em contextos internacionais.",
+    "SUBTITLE": "Capacidade de comunicação em inglês para colaboração técnica, leitura de documentação, estudos e troca com times globais.",
+    "PORTUGUESE": "Português",
+    "PORTUGUESE_LEVEL": "Nativo",
+    "ENGLISH": "Inglês",
+    "ENGLISH_LEVEL": "Avançado",
+    "CERTIFICATE_TITLE": "Certificação e evidências",
+    "CERTIFICATE_TEXT": "Certificado em inglês como reforço da atuação em ambientes técnicos com comunicação internacional."
+  },
+  "CONTACT_PAGE": {
+    "KICKER": "Contato",
+    "TITLE": "Vamos conversar sobre produto, arquitetura ou novos desafios.",
+    "SUBTITLE": "A página foi redesenhada para vender melhor o seu perfil. Agora o CTA final também precisa ser forte, direto e profissional.",
+    "WHATSAPP": "WhatsApp",
+    "LINKEDIN": "LinkedIn",
+    "INSTAGRAM": "Instagram",
+    "GITHUB": "GitHub",
+    "EMAIL": "E-mail",
+    "AVAILABILITY_TITLE": "Como você pode me acionar",
+    "AVAILABILITY_TEXT": "Disponível para oportunidades sênior, consultoria técnica, arquitetura frontend e conversas sobre produtos web modernos."
+  },
   "DOWNLOAD": {
-    "TITLE": "Baixar Currículo",
-    "PT": "Download em Português",
-    "EN": "Download em Inglês",
-    "EN_SIMPLE": "Download em Inglês (Simplificado)"
+    "TITLE": "Currículos para envio rápido",
+    "SUBTITLE": "Versões em português e inglês prontas para recrutadores, gestores e networking técnico.",
+    "PT": "Versão em português",
+    "EN": "Versão em inglês",
+    "EN_SIMPLE": "Versão em inglês simplificada"
   },
   "NASA_COMPONENT": {
-    "TITLE": "Imagem do Dia da NASA",
+    "TITLE": "Astronomy Picture of the Day",
     "SUB_TITLE": "Exemplo de consumo de API com Angular e TypeScript",
-    "DATE": "Selecione a Data",
-    "CARREGANDO": "Carregando imagem...",
-    "IMG_ERROR": "Não foi possível carregar a imagem do dia. Tente outra data ou volte mais tarde.",
-    "MIDIA_NAO_SUPORTADA": "Este tipo de mídia não é suportado para visualização direta.",
-    "VER_CONTEUDO_EXTERNO": "Clique aqui para visualizar o conteúdo no site da NASA."
-  },
-  "LANGUAGES": {
-    "TITLE": "Idiomas",
-    "CARD_TITLE": "Idiomas Pedro Felipe",
-    "PORTUGUESE": "Português - Nativo",
-    "ENGLISH": "Inglês - Avançado"
-  },
-  "CONTACTS": {
-    "TITLE": "Contatos",
-    "SUB_TITLE": "Contatos Pedro Felipe"
-  },
-  "WEATHER": {
-    "TITLE": "Tempo por Cidade",
-    "SUB_TITLE": "Tempo em",
-    "TEMPERATURE": "Temperatura",
-    "SENSATION": "Sensação térmica",
-    "DESCRIPTION": "Descrição",
-    "HUMIDITY": "Umidade",
-    "WIND": "Velocidade do vento"
+    "DATE": "Selecione a data",
+    "CARREGANDO": "Carregando mídia...",
+    "IMG_ERROR": "Não foi possível carregar a mídia para essa data. Tente novamente com outra seleção.",
+    "MIDIA_NAO_SUPORTADA": "Esse tipo de mídia não pode ser exibido diretamente aqui.",
+    "VER_CONTEUDO_EXTERNO": "Abrir conteúdo no site da NASA"
   }
 }
-  

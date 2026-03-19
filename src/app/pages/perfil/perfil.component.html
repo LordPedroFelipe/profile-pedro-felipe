@@ -1,112 +1,140 @@
-<mat-toolbar color="primary">
-    <span>{{ 'TITLE' | translate }}</span>
-</mat-toolbar>
-  
-  <div class="resumo-wrapper">
-    <div class="foto-container">
-      <img src="assets/img/PedroFelipe.PNG" alt="Pedro Photo Profile" />
-    </div>
-  
-    <mat-card class="profile-card observed-card">
-      <mat-card-title>{{ 'HELLO' | translate }}</mat-card-title>
-      <mat-card-title>{{ 'INTRO' | translate }}</mat-card-title>
-      <mat-card-content>
-        <p>{{ 'TECH_DESC' | translate }}</p>
-        <p>{{ 'LOCATION' | translate }}</p>
-      </mat-card-content>
-    </mat-card>
-  </div>  
-  
-  <mat-card class="resumo-card observed-card">
-    <mat-card-title>{{ 'SUMMARY' | translate }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ 'SUMMARY_1' | translate }}</p>
-      <p>{{ 'SUMMARY_2' | translate }}</p>
-      <p>{{ 'SUMMARY_3' | translate }}</p>
-      <p>{{ 'SUMMARY_4' | translate }}</p>
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-card class="resumo-card observed-card" id="skills-section">
-    <mat-card-title>{{ 'SKILLS' | translate }}</mat-card-title>
-    <mat-card-content>
-      <p>
-        <button mat-raised-button class="skill-button">Angular (7+)</button>
-        <button mat-raised-button class="skill-button">Typescript</button>
-        <button mat-raised-button class="skill-button">Javascript</button>
-        <button mat-raised-button class="skill-button">HTML5</button>
-        <button mat-raised-button class="skill-button">CSS3</button>
-        <button mat-raised-button class="skill-button">NodeJS</button>
-        <button mat-raised-button class="skill-button">JSON</button>
-        <button mat-raised-button class="skill-button">API/WebServices</button>
-        <button mat-raised-button class="skill-button">Unit Tests</button>
-        <button mat-raised-button class="skill-button">MicroFrontend</button>
-        <button mat-raised-button class="skill-button">Module Federation</button>
-        <button mat-raised-button class="skill-button">Nx.Dev</button>
-      </p>
-      <p>
-        <button mat-raised-button class="skill-button">SCRUM</button>
-        <button mat-raised-button class="skill-button">Responsive Development</button>
-        <button mat-raised-button class="skill-button">PostgresSQL</button>
-        <button mat-raised-button class="skill-button">MongoDB</button>
-        <button mat-raised-button class="skill-button">Git/Github/GitLab</button>
-        <button mat-raised-button class="skill-button">Angular Material</button>
-        <button mat-raised-button class="skill-button">Bootstrap</button>
-        <button mat-raised-button class="skill-button">PrimeNG</button>
-        <button mat-raised-button class="skill-button">Angukar 18</button>
-        <button mat-raised-button class="skill-button">React</button>
-      </p>
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-card class="resumo-card observed-card">
-    <mat-card-title>{{ 'PUBLICATIONS' | translate }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ 'PUBLICATION_1' | translate }}</p>
-      <p>
-        <a href="https://medium.com/@pf.souza15/microsoft-msal-authentication-with-angular-and-microfrontend-nx-dev-5e7f492fd4dd" target="_blank" rel="noopener">
-          Authentication with Angular and MicroFrontend Nx.Dev
-        </a>
-      </p>
-      <p>{{ 'PUBLICATION_2' | translate }}</p>
-      <p>
-        <a href="https://medium.com/@pf.souza15/creating-an-angular-project-with-nx-dev-a1ad925ab5f5" target="_blank" rel="noopener">
-          Creating an Angular Project with Nx.dev
-        </a>
-      </p>
-      <p>{{ 'PUBLICATION_3' | translate }}</p>
-      <p>
-        <a href="https://medium.com/@pf.souza15/como-criar-uma-biblioteca-de-componentes-angular-reutiliz%C3%A1vel-usando-nx-dev-e-module-federation-6ad7f6b4c672" target="_blank" rel="noopener">
-          Angular Component Library
-        </a>
-      </p>
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-card class="resumo-card observed-card">
-    <mat-card-title>{{ 'DOWNLOAD.TITLE' | translate }}</mat-card-title>
-    <mat-card-content>
-        <app-download-cv></app-download-cv>
-    </mat-card-content>
-  </mat-card>
-  
-  
-  <mat-card class="resumo-card observed-card">
-    <mat-card-title>{{ 'PHOTOS' | translate }}</mat-card-title>
-    <mat-card-content>
-      <app-carrossel-imagens></app-carrossel-imagens>
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-card class="resumo-card observed-card">
-    <mat-card-content>
-      <app-nasa-apod></app-nasa-apod>
-    </mat-card-content>
-  </mat-card>
-  
-  <!--mat-card class="resumo-card observed-card">
-    <mat-card-content>
-      <app-weather></app-weather>
-    </mat-card-content>
-  </mat-card-->
+﻿<section class="hero-shell observed-card">
+  <div class="hero-copy">
+    <span class="section-kicker">{{ 'PROFILE.KICKER' | translate }}</span>
+    <h1 class="hero-title">{{ 'PROFILE.TITLE' | translate }}</h1>
+    <p class="hero-subtitle">{{ 'PROFILE.SUBTITLE' | translate }}</p>
 
+    <div class="hero-meta">
+      <span class="badge"><mat-icon>location_on</mat-icon>{{ 'PROFILE.LOCATION' | translate }}</span>
+      <span class="badge"><mat-icon>verified</mat-icon>{{ 'PROFILE.STATUS' | translate }}</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="primary-button" routerLink="/contacts">{{ 'PROFILE.CTA_PRIMARY' | translate }}</a>
+      <a class="secondary-button" href="assets/pdf/PedroFelipeProfilePortugues.pdf" download target="_blank" rel="noopener">
+        {{ 'PROFILE.CTA_SECONDARY' | translate }}
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual glass-panel">
+    <div class="hero-photo-wrap">
+      <img src="assets/img/PedroFelipeDev.PNG" alt="Pedro Felipe" class="hero-photo" />
+    </div>
+    <div class="hero-card soft-card">
+      <p class="hero-card-label">Frontend Strategy</p>
+      <h2>Angular + TypeScript + Product Vision</h2>
+      <p>Arquitetura evolutiva, colaboração forte com squads e foco em UX, manutenção e escala.</p>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-grid observed-stagger">
+  <article class="metric-card soft-card" *ngFor="let metric of metrics">
+    <h2>{{ metric.VALUE }}</h2>
+    <p>{{ metric.LABEL }}</p>
+  </article>
+</section>
+
+<section class="section-shell observed-card">
+  <div class="section-header">
+    <div>
+      <span class="section-kicker">{{ 'PROFILE.HIGHLIGHTS.KICKER' | translate }}</span>
+      <h2 class="section-title">{{ 'PROFILE.HIGHLIGHTS.TITLE' | translate }}</h2>
+    </div>
+  </div>
+
+  <div class="card-grid observed-stagger">
+    <article class="soft-card highlight-card" *ngFor="let item of highlightItems">
+      <h3>{{ item.TITLE }}</h3>
+      <p>{{ item.TEXT }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section-shell observed-card" id="skills-section">
+  <div class="section-header">
+    <div>
+      <span class="section-kicker">{{ 'PROFILE.SKILLS.KICKER' | translate }}</span>
+      <h2 class="section-title">{{ 'PROFILE.SKILLS.TITLE' | translate }}</h2>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <article class="soft-card skill-group" *ngFor="let group of skillGroups">
+      <h3>{{ group.TITLE }}</h3>
+      <div class="skill-list">
+        <span class="skill-chip" *ngFor="let item of group.ITEMS">{{ item }}</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="insights-grid">
+  <div class="section-shell observed-card">
+    <div class="section-header compact">
+      <div>
+        <span class="section-kicker">{{ 'PROFILE.FEATURED.KICKER' | translate }}</span>
+      </div>
+    </div>
+
+    <div class="feature-list observed-stagger">
+      <article class="soft-card feature-card" *ngFor="let item of featuredItems">
+        <h3>{{ item.TITLE }}</h3>
+        <p>{{ item.TEXT }}</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-shell observed-card">
+    <div class="section-header compact">
+      <div>
+        <span class="section-kicker">{{ 'DOWNLOAD.TITLE' | translate }}</span>
+        <h2 class="section-title small">{{ 'DOWNLOAD.SUBTITLE' | translate }}</h2>
+      </div>
+    </div>
+
+    <app-download-cv></app-download-cv>
+  </div>
+</section>
+
+<section class="section-shell observed-card">
+  <div class="section-header">
+    <div>
+      <span class="section-kicker">{{ 'PROFILE.PUBLICATIONS.KICKER' | translate }}</span>
+      <h2 class="section-title">{{ 'PROFILE.PUBLICATIONS.TITLE' | translate }}</h2>
+    </div>
+  </div>
+
+  <div class="publication-list observed-stagger">
+    <a class="soft-card publication-card" *ngFor="let item of publicationItems" [href]="item.LINK" target="_blank" rel="noopener">
+      <div>
+        <h3>{{ item.TITLE }}</h3>
+        <p>{{ item.TEXT }}</p>
+      </div>
+      <mat-icon>north_east</mat-icon>
+    </a>
+  </div>
+</section>
+
+<section class="section-shell observed-card">
+  <div class="section-header">
+    <div>
+      <span class="section-kicker">{{ 'PROFILE.GALLERY.KICKER' | translate }}</span>
+    </div>
+  </div>
+
+  <app-carrossel-imagens></app-carrossel-imagens>
+</section>
+
+<section class="section-shell observed-card playground-shell">
+  <div class="section-header">
+    <div>
+      <span class="section-kicker">{{ 'PROFILE.PLAYGROUND.KICKER' | translate }}</span>
+      <h2 class="section-title">{{ 'PROFILE.PLAYGROUND.TITLE' | translate }}</h2>
+      <p class="section-subtitle">{{ 'PROFILE.PLAYGROUND.SUBTITLE' | translate }}</p>
+    </div>
+  </div>
+
+  <app-nasa-apod></app-nasa-apod>
+</section>

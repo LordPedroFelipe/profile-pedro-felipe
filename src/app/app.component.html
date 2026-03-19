@@ -1,13 +1,24 @@
-<app-menu></app-menu>
-<div class="main-container">
-  <div class="idioma-switcher">
-    <button mat-icon-button (click)="trocarIdioma('pt')" matTooltip="Português">
-      <img src="assets/img/br.svg" alt="PT" />
-    </button>
-    <button mat-icon-button (click)="trocarIdioma('en')" matTooltip="English">
-      <img src="assets/img/eua.svg" alt="EN" />
-    </button>
+﻿<div class="app-shell">
+  <app-menu></app-menu>
+
+  <div class="utility-bar glass-panel observed-card animate">
+    <div>
+      <p class="utility-label">{{ 'GLOBAL.LANG_LABEL' | translate }}</p>
+    </div>
+
+    <div class="idioma-switcher">
+      <button type="button" [class.active]="isActiveLang('pt')" (click)="trocarIdioma('pt')">
+        <img src="assets/img/br.svg" alt="Português" />
+        <span>PT</span>
+      </button>
+      <button type="button" [class.active]="isActiveLang('en')" (click)="trocarIdioma('en')">
+        <img src="assets/img/eua.svg" alt="English" />
+        <span>EN</span>
+      </button>
+    </div>
   </div>
 
-  <router-outlet></router-outlet>
+  <main class="main-container">
+    <router-outlet></router-outlet>
+  </main>
 </div>

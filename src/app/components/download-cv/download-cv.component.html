@@ -1,17 +1,16 @@
-<mat-card class="download-card">
-    <mat-card-title>{{ 'DOWNLOAD.TITLE' | translate }}</mat-card-title>
-    <mat-card-content>
-      <div class="download-links">
-        <a href="assets/pdf/PedroFelipeProfilePortugues.pdf" download target="_blank" mat-raised-button color="primary">
-          {{ 'DOWNLOAD.PT' | translate }}
-        </a>
-        <a href="assets/pdf/ProfilePedroFelipeDevEnglish.pdf" download target="_blank" mat-raised-button color="primary">
-          {{ 'DOWNLOAD.EN' | translate }}
-        </a>
-        <a href="assets/pdf/resume_pedro_felipe_elias_de_souza.pdf" download target="_blank" mat-raised-button color="primary">
-          {{ 'DOWNLOAD.EN_SIMPLE' | translate }}
-        </a>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  
+﻿<div class="download-links">
+  <a href="assets/pdf/PedroFelipeProfilePortugues.pdf" download target="_blank" rel="noopener" class="download-link primary-button">
+    <mat-icon>download</mat-icon>
+    {{ 'DOWNLOAD.PT' | translate }}
+  </a>
+
+  <a href="assets/pdf/ProfilePedroFelipeDevEnglish.pdf" download target="_blank" rel="noopener" class="download-link secondary-button">
+    <mat-icon>download</mat-icon>
+    {{ 'DOWNLOAD.EN' | translate }}
+  </a>
+
+  <a href="assets/pdf/resume_pedro_felipe_elias_de_souza.pdf" download target="_blank" rel="noopener" class="download-link ghost-button">
+    <mat-icon>download</mat-icon>
+    {{ 'DOWNLOAD.EN_SIMPLE' | translate }}
+  </a>
+</div>

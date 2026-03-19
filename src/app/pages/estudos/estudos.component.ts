@@ -1,7 +1,14 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+﻿import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { AnimationObserverService } from 'src/app/services/animation-observer.service';
+
+interface StudyItem {
+  INSTITUTION: string;
+  DATE: string;
+  COURSE: string;
+  TYPE: string;
+}
 
 @Component({
   selector: 'app-estudos',
@@ -9,7 +16,9 @@ import { AnimationObserverService } from 'src/app/services/animation-observer.se
   styleUrls: ['./estudos.component.scss']
 })
 export class EstudosComponent implements AfterViewInit, OnDestroy {
-  private langChangeSub!: Subscription;
+  studies: StudyItem[] = [];
+
+  private langChangeSub?: Subscription;
 
   constructor(
     private animationService: AnimationObserverService,
@@ -17,18 +26,21 @@ export class EstudosComponent implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
-    // Primeira chamada após renderizar o componente
-    setTimeout(() => this.animationService.observarAnimacaoCards(), 100);
+    this.loadStudies();
 
-    // Nova chamada sempre que trocar idioma
-    this.langChangeSub = this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-      setTimeout(() => this.animationService.observarAnimacaoCards(), 100);
+    this.langChangeSub = this.translateService.onLangChange.subscribe((_event: LangChangeEvent) => {
+      this.loadStudies();
     });
   }
 
   ngOnDestroy(): void {
-    if (this.langChangeSub) {
-      this.langChangeSub.unsubscribe();
-    }
+    this.langChangeSub?.unsubscribe();
+  }
+
+  private loadStudies(): void {
+    this.translateService.get('STUDIES.ITEMS').subscribe((items: StudyItem[]) => {
+      this.studies = items ?? [];
+      setTimeout(() => this.animationService.observarAnimacaoCards(0.15), 80);
+    });
   }
 }
